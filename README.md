@@ -11,18 +11,18 @@
     and some fancy Patterns
 
 ### Note
-    *L-Left
+    L-Left
 
-    *R-Right
+    R-Right
 
-    *F-Full
+    F-Full
 
-    *N-Natural
+    N-Natural
 
-    *E-Even
+    E-Even
 
-    *O-Odd
+    O-Odd
 
-    *I-Inverse
+    I-Inverse
 
-    *H-Hollow
+    H-Hollow
