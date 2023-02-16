@@ -1,6 +1,6 @@
 ## Recent Running Topic	
 
-            Star/Alphabet-Numeric(Palidrome/Floyd/Pascal)
+# Star/Alphabet-Numeric(Palidrome/Floyd/Pascal)
 
         	Rectangle-Solid/Hollow
 
@@ -10,11 +10,19 @@
 
             and some fancy Patterns
 
-                *L-Left
-                *R-Right
-                *F-Full
-                *N-Natural
-                *E-Even
-                *O-Odd
-                *I-Inverse
-                *H-Hollow
+# Note
+    *L-Left
+
+    *R-Right
+
+    *F-Full
+
+    *N-Natural
+
+    *E-Even
+
+    *O-Odd
+
+    *I-Inverse
+
+    *H-Hollow
