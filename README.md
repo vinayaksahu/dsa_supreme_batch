@@ -1,6 +1,6 @@
-## Recent Running Topic	
+# Recent Running Topic	
 
-# Star/Alphabet-Numeric(Palidrome/Floyd/Pascal)
+### Star/Alphabet-Numeric(Palidrome/Floyd/Pascal)
 
         	Rectangle-Solid/Hollow
 
@@ -10,7 +10,7 @@
 
             and some fancy Patterns
 
-# Note
+### Note
     *L-Left
 
     *R-Right
