@@ -3,14 +3,12 @@ using namespace std;
 
 int main()
 {
-    int n = 5;
-    cin >> n;
+    int N = 55;
 
-    for (int i = n; i >= 1; i--)
-    {
+    for (int i = N; i > 0; i--) {
         cout << i << endl;
     }
-    
+        
 
     return 0;
 }
