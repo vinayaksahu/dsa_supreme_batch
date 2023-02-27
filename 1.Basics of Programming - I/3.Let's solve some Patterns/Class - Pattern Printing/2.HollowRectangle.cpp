@@ -2,7 +2,20 @@
 using namespace std;
 
 int main() {
+
+    int n = 10;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == 0 || i == n-1 || j == 0 || j == n-1)
+                cout << "*";
+            else   
+                cout << " ";
+        } cout << endl;
+    }
     
+
+/*     
     int rowCount = 5;
     int colCount = 10;
 
@@ -23,7 +36,7 @@ int main() {
             cout << endl; // new line
         
     }
-    
+     */
             
     return 0;
 }
