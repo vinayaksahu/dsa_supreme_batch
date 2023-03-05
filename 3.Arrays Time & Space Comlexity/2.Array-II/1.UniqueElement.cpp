@@ -17,7 +17,7 @@ int main () {
     vector <int> arr {1, 2, 4, 2, 1, 3, 6, 5, 5, 6, 4};
 
     //xor operation practice
-    cout << (7 ^ 4) << endl << endl;
+    cout << (1 ^ 2 ^ 4 ^ 2 ^ 1 ^ 3 ^ 6 ^ 5 ^ 5 ^ 6 ^ 4) << endl << endl;
 
     //Find unique element
 
