@@ -21,9 +21,9 @@ void findIntersection(vector<int> arr, vector<int> brr) {
         for (int j = 0; j < brr.size(); j++) {
             if (element == brr[j]) {
                 ans.push_back(arr[i]);
-                //break;           
+                break;           
                 //or we can mark
-                brr[j] = INT_MIN;
+                //brr[j] = INT_MIN;
             }
         }
     }
@@ -35,7 +35,7 @@ void findIntersection(vector<int> arr, vector<int> brr) {
 int main() {
 
     vector<int> arr{1, 2, 3, 4, 5, 6, 7, 8, 9};
-    vector<int> brr{2, 4, 6, 8};
+    vector<int> brr{2, 4, 6, 8, 9, 9};
 
     findIntersection(arr, brr);
 

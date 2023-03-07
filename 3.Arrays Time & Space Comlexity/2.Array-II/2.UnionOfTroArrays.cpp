@@ -20,9 +20,15 @@ void findUnion(vector<int> arr, vector<int> brr) {
     }
 
     //push all elements of brr to ans
-    for (int i = 0; i < brr.size(); i++) {
-        ans.push_back(brr[i]);
+    for (int i = 0; i < ans.size(); i++) {
+        int element = ans[i];
+        for (int j = 0; j < brr.size(); j++) {
+            if (element != brr[j]) {
+                ans.push_back(brr[j]);
+            }
+        }
     }
+    
 
     //print ans 
     printArray(ans);
@@ -30,7 +36,7 @@ void findUnion(vector<int> arr, vector<int> brr) {
 
 int main() {
     
-    vector<int> arr{2, 4, 6, 8};
+    vector<int> arr{2, 4, 6, 8, 7};
     vector<int> brr{1, 3, 5, 7};
 
     findUnion(arr, brr);
