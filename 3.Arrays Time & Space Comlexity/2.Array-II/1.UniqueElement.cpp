@@ -3,25 +3,23 @@
 using namespace std;
 
 int findUnique(vector<int> arr) {
-    
+
     int ans = 0;
+
     for (int i = 0; i < arr.size(); i++) {
-        ans = ans ^ arr[i];    
+        ans = ans ^ arr[i];
     }
-    
+
     return ans;
 }
 
-int main () {
+int main() {
 
-    vector <int> arr {1, 2, 4, 2, 1, 3, 6, 5, 5, 6, 4};
+    vector<int> arr{1,4,7,2,5,8,3,6,9,1,4,7,2,5,8,3,6};
 
-    //xor operation practice
-    cout << "XOR operation test: " <<(1 ^ 2 ^ 4 ^ 2 ^ 1 ^ 3 ^ 6 ^ 5 ^ 5 ^ 6 ^ 4) << endl << endl;
+    int uniqueElement = findUnique(arr);        
 
-    //Find unique element
-    int uniqueElement = findUnique(arr);
-    cout << "Unique element: "<< uniqueElement << endl;
+    cout << "Unique element of the array arr is: " << uniqueElement;
 
     return 0;
 }
