@@ -1,24 +1,33 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main() {
 
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int start = 0;
-    int end = n-1;
+    int arr[] = {9,8,7,6,5,4,3,2,1};
+
+    int size = sizeof(arr) / sizeof(arr[0]);
 
     //reverse array
-    while (start <= end) {
-        swap (arr[start], arr[end]);
+//For-Loop indexing
+/*     for (int i = size-1; i >= 0; i--) {
+        cout << arr[i] <<" ";
+    } */
+
+//2 Pointer approach - while loop
+    int start = 0;
+    int end = size - 1;
+    while(start < end) {
+        swap(arr[start], arr[end]);
         start++;
         end--;
     }
 
     //print array
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+    for (auto val : arr) {
+        cout << val <<" ";
     }
+    
+
 
     return 0;
 }
