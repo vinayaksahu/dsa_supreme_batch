@@ -4,13 +4,15 @@ using namespace std;
 
 int main() {
     
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int size = sizeof(arr) / sizeof(int);
+    int arr[] = {9,8,7,6,3,2,5,4,1,2,8,9,6,5,2,3,5,4,7,8,9};
+    int count = sizeof(arr) / sizeof(int);
+    int key = 6;
     int mini = INT_MAX;
-    for (int i = 0; i < size; i++)
-        if (arr[i] < mini)
+
+    for (int i = 0; i < count; i++)
+        if(mini > arr[i])
             mini = arr[i];
-    cout << "Minimum Number: " << mini;
+    cout << mini << endl;
 
     return 0;
 }
