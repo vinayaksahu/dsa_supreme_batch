@@ -8,9 +8,13 @@ int main() {
 
     //Left rotate by one element
     int first = arr[0]; //store first element at first variable
-    for (int i = 1; i < n; i++) {
+/*     for (int i = 1; i < n; i++) {
         arr[i-1] = arr[i]; //left shift elements by one elemnt
+    } */
+    for (int i = 0; i < n-1; i++) {
+        arr[i] = arr[i+1];
     }
+    
     arr[n-1] = first; // store 1st element(first) tp 
 
     //print array
