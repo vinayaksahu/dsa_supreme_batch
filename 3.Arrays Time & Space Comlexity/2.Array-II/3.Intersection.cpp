@@ -20,7 +20,7 @@ void findIntersection (vector<int> arr, vector<int> brr) {
         for (int j = 0; j < brr.size(); j++) {
             if (element == brr[j]) {
                 ans.push_back(brr[j]);
-                brr[j] = INT_MIN;
+                brr[j] = INT_MIN; //break;
             }
         }
     }

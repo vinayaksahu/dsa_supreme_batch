@@ -29,7 +29,7 @@ void findUnion(vector<int> arr, vector<int> brr) {
 int main() {
 
     vector<int> arr{1,3,5,7};
-    vector<int> brr{2,4,6,8};
+    vector<int> brr{2,4,6,7,8};
 
     findUnion(arr, brr);
 

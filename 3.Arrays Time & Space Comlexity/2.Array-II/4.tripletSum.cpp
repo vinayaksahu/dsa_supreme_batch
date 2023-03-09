@@ -10,7 +10,7 @@ void tripletSum(vector<int> arr, int sum) {
             int element2 = arr[j];
             for (int k = j+1; k < arr.size(); k++) {
                 int element3 = arr[k];
-                if (sum == element1 + element2+ element3) {
+                if (sum == element1 + element2 + element3) {
                     cout << element1 <<", "<<element2 <<", "<<element3<<endl; 
                 }
             }
