@@ -2,31 +2,35 @@
 #include<vector>
 using namespace std;
 
-int findMajority(vector<int> arr) {
+void findMajority(vector<int> arr) {
 
-    int count = 0;
-
+    int maxCount = 0;
+    int index = -1;
     for (int i = 0; i < arr.size(); i++) {
-        int checkElement = arr[i];
+        int count = arr[i];
         for (int j = 0; j < arr.size(); j++) {
-            if(checkElement == arr[j]) {
+            if(arr[i] == arr[j]) 
                 count++;
-                if(count > arr.size()/2)
-                    break;
-            }
+        }
+        if (count > maxCount) {
+            maxCount = count;
+            index = i;
         }
     }
-    
-    return count;
+
+    if (maxCount > arr.size()/2) {
+        cout << arr[index] << endl;
+    }
+    else {
+        cout << "No majority element.";
+    }
 }
 
 int main() {
 
     vector<int> arr{1,2,3,1,2,3,0,3,3,3,3,3,3,3};
 
-    int majorityElement = findMajority(arr);
-
-    cout << majorityElement;
+    findMajority(arr);
 
     return 0;
 }
