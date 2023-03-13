@@ -4,6 +4,7 @@
         "array": "cpp",
         "initializer_list": "cpp",
         "utility": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "1.C": "cpp"
     }
 }
