@@ -3,18 +3,19 @@
 using namespace std;
 
 int transpose(int a[][3], int m, int n) {
-
+    int transposed[3][3];
     int maxi = INT_MIN;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            swap(a[i][j], a[j][i]); 
+            //swap(a[i][j], a[j][i]);  not working
+            transposed[i][j] = a[j][i];
         }
     }
 
     //print 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            cout << a[i][j]; 
+            cout << transposed[i][j]; 
         } cout << endl;
     }
 
