@@ -1,23 +1,33 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
-int main() {
+void extremeElement(vector<int> arr) {
 
-    int arr[] = {1,4,5,2,6,3,5};
-
-    //two poiter approach
-    int size = sizeof(arr) / sizeof(arr[0]);
+    // 2 pointer approach
     int start = 0;
-    int end = size - 1;
-
+    int end = arr.size() - 1;
     while(start <= end) {
-        if(start == end)
-            cout << "(" << arr[start]  << ")"<< endl;
-        else    
-            cout << "(" << arr[start] << ", " <<arr[end] << ")"<< endl;
-        start++;
-        end--;
+        if(start == end) {
+            cout << arr[start];
+            start++;
+            end--;
+        }
+        else {
+            cout << arr[start] << " " << arr[end] << endl;        
+            start++;
+            end--;
+        }
     }
+        
+}
+
+int main() {
+    
+    vector<int> arr{1,2,3,4,5,6,7,8,9};
+
+    //print extreme in array
+    extremeElement(arr);
 
     return 0;
 }
