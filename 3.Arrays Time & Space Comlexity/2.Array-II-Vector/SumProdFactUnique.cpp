@@ -4,12 +4,12 @@ using namespace std;
 
 int findUnique(vector<int> arr) {
 
-    int ans = 0;
+    int unique = 0;
     for (int i = 0; i < arr.size(); i++) {
-        ans = ans ^ arr[i];
+        unique = unique ^ arr[i];
     }
 
-    return ans;
+    return unique;
 }
 
 int findSum (vector<int> arr) {
