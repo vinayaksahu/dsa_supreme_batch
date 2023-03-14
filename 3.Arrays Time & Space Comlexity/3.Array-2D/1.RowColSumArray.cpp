@@ -8,7 +8,7 @@ void printRowSum(int arr[][3], int m, int n) {
         for (int j = 0; j < n; j++) {
             sum = sum + arr[i][j];
         }   cout << "Row " << i << " :" << sum << endl;
-    }
+    } cout << endl;
 }
 
 void printColSum(int arr[][3], int m, int n) {
@@ -18,7 +18,7 @@ void printColSum(int arr[][3], int m, int n) {
         for (int j = 0; j < n; j++) {
             sum = sum + arr[j][i];
         }   cout << "Col " << i << " :" << sum << endl;
-    }
+    } cout << endl;
 }
 
 
