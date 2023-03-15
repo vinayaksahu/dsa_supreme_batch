@@ -5,6 +5,9 @@
         "initializer_list": "cpp",
         "utility": "cpp",
         "ostream": "cpp",
-        "1.C": "cpp"
+        "1.C": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
     }
 }
