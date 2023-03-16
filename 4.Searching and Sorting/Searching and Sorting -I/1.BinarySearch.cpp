@@ -5,18 +5,25 @@ using namespace std;
 
 int binarySearch(vector<int> arr, int key) {
 
-    int start = 0;
-    int end = arr.size()-1;
-    int mid = start + (end - start) / 2;
-    while (start < end) {
-        if (arr[mid] == key)
+    int s = 0;
+    int e = arr.size()-1;
+    int mid = s + (e - s) / 2;
+    while(s <= e) {
+        //agr key mil gya
+        if (arr[mid] == key) {
             return mid;
-        else if (arr[mid] < key)
-            start = mid + 1;
-        else if (arr[mid] > key)
-            end = mid - 1;
-        mid = start + (end - start) / 2;
+        }
+        //nhi mila - left search
+        else if(arr[mid] > key) {
+            e = mid - 1;
+        }
+        //nhi mila - right search
+        else if(arr[mid] < key) {
+            s = mid + 1;
+        }
+        mid = s + (e - s) / 2;
     }
+
     return -1;
 }
 
@@ -28,17 +35,17 @@ int main() {
     int size = 7;
     int brrKey = 7;
     if(binary_search(brr, brr + size, brrKey))
-        cout << "Found" << endl;
+        cout << "array:Found" << endl;
     else    
-        cout << "Not found" << endl;
+        cout << "array:Not found" << endl;
 
     //for vector
     vector<int> arr{1,2,3,4,5,6,7,8,9};
     int arrKey = 8;
     if (binary_search(arr.begin(), arr.end(), arrKey))
-        cout << "Found." << endl;
+        cout << "vector:Found" << endl;
     else
-        cout << "Not found" << endl;
+        cout << "vector:Not found" << endl;
 
     //Binary Search using function
     int key = 8;
