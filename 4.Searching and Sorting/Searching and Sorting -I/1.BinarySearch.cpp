@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 int binarySearch(vector<int> arr, int key) {
@@ -20,11 +21,27 @@ int binarySearch(vector<int> arr, int key) {
 }
 
 int main() {
+    
+    //Binary Search using inbuild function
+    //for array
+    int brr[] = {1,2,3,4,5,6,7};
+    int size = 7;
+    int brrKey = 7;
+    if(binary_search(brr, brr + size, brrKey))
+        cout << "Found" << endl;
+    else    
+        cout << "Not found" << endl;
 
+    //for vector
     vector<int> arr{1,2,3,4,5,6,7,8,9};
+    int arrKey = 8;
+    if (binary_search(arr.begin(), arr.end(), arrKey))
+        cout << "Found." << endl;
+    else
+        cout << "Not found" << endl;
 
+    //Binary Search using function
     int key = 8;
-
     int index = binarySearch(arr, key);
 
     if (index == -1)
