@@ -8,21 +8,19 @@ int binary_search(vector<int> arr, int key) {
     int s = 0;
     int e = arr.size()-1;
     int mid = s + (e - s) / 2;
-
     while(s <= e) {
-
-        //found
+        //agr key mil gya
         if(key == arr[mid])
             return mid;
-        //left search
-        else if(key < arr[mid])
+        //nhi mila - mid se chota hai - update end
+        else if (key < arr[mid])
             e = mid - 1;
-        //right search
-        else //if(key > arr[mid])
+        //nhi mila - mid se bda hai - right start
+        else //if (key > arr[mid])
             s = mid + 1;
-        //update mid
-        mid = s + (e - s) / 2;
-    }
+        //mid fir se nikalo
+        mid = s + (e - s) / 2; 
+    } 
     return -1;
 }
 
