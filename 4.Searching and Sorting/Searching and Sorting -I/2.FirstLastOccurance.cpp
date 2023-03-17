@@ -29,16 +29,19 @@ int findLastOcc(vector<int> arr, int target) {
     int mid = s + (e - s) / 2;
     while(s <= e) {
         //agr target mil gya
-        if(arr[mid] == target) {
-            ans = mid; //ans store kra do
-            s = mid + 1; //ab right me search krna h agr last occurance hai to
+        if(target == arr[mid]) {
+            ans = mid; //ans me mid store kra de
+            s = mid + 1; // last occurance hai to right me search krna hai - upadte start
         }
-        else if(arr[mid] > target) //left me search krna
-            e = mid - 1;
-        else if(arr[mid] < target) //right me search krna
+        //agr nhi mila - mid se bda hai target - update start
+        else if(target > arr[mid])
             s = mid + 1;
-        mid = s + (e - s) / 2; //update mid
+        //agr nhi mila - mid se chhota hai target - update end
+        else if(target < arr[mid])
+            e = mid - 1;
+        mid = s + (e -s) / 2; //mid ko fir se nikalo
     }
+
     return ans;
 }
 
