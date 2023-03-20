@@ -7,16 +7,15 @@ int binary_search(vector<int> arr, int key) {
 
     int s = 0;
     int e = arr.size()-1;
-    while(s <= e) {
-
+    while (s <= e) {
         int mid = s + (e - s) / 2;
-        //agr mila
-        if(key == arr[mid])
+        //found
+        if(arr[mid] == key) 
             return mid;
-        else if(key < arr[mid]) //end ko update kro means left part search krna hai
-            e = mid - 1;
-        else if(key > arr[mid]) //start ko update krna hai means right part me search krna hai
-            s = mid + 1;
+        else if(arr[mid] < mid)  //search for left
+            e = mid -  1; //update end
+        else if(arr[mid] > mid) //search for right
+            s = mid + 1; //update start
     }
     return -1;
 }

@@ -2,9 +2,9 @@
 #include<vector>
 using namespace std;
 
-void merge(vector<int> arr, int s, int e) {
+void merge(int *arr, int s, int e) {
     //mid
-    int mid = s + (e - s) / 2;
+    int mid = (s + e) / 2;
 
     int len1 = mid - s + 1; //first new array length
     int len2 = e - mid; //second new array length
@@ -31,7 +31,7 @@ void merge(vector<int> arr, int s, int e) {
     int leftIndex = 0;
     int rightIndex = 0;
     int mainArrayIndex = s;
-    while(leftIndex < len1 and rightIndex < len2) {
+    while(leftIndex < len1 && rightIndex < len2) {
         if(left[leftIndex] < right[rightIndex])
             arr[mainArrayIndex++] = left[leftIndex++];
         else
@@ -50,14 +50,14 @@ void merge(vector<int> arr, int s, int e) {
 
 }
 
-void mergeSort(vector<int> arr, int s, int e) {
+void mergeSort(int* arr, int s, int e) {
 
     //base case
     if(s >= e)
         return;
 
     //devide
-    int mid = s + (e - s) / 2;
+    int mid = (s + e) / 2;
 
     //left mergeSort
     mergeSort(arr, s, mid);
@@ -71,9 +71,9 @@ void mergeSort(vector<int> arr, int s, int e) {
 
 int main() {
 
-    vector<int> arr{5,4,1,6,9,8,7,1,2,3};
+    int arr[] = {5,4,1,6,9,8,7,1,2,3};
 
-    int size = arr.size();
+    int size = sizeof(arr) / sizeof(arr[0]);
 
     int start = 0;
 
