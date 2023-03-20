@@ -18,11 +18,11 @@ int findPeak(vector<int> arr) {
 
 int main () {
 
-    vector<int> arr{1,10,5,2};
+    vector<int> arr{1,2,10,12,5,2};
 
-    int peakElement = findPeak(arr);
+    int peakIndex = findPeak(arr);
 
-    cout << "Peak Element: " << peakElement;
+    cout << "Peak Element: " << arr[peakIndex];
 
     return 0;
 }
