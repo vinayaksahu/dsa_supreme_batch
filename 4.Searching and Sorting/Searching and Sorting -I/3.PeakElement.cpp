@@ -10,8 +10,8 @@ int findPeak(vector<int> arr) {
         int mid = s + (e - s) / 2;
         if(arr[mid] < arr[mid + 1])
             s = mid + 1; //right search
-        else
-            e = mid;
+        else //if (arr[mid] > arr[mid + 1])
+            e = mid; //would be an ans at last iteration
     }
     return e;    
 }

@@ -7,24 +7,23 @@ int binary_search(vector<int> arr, int key) {
 
     int s = 0;
     int e = arr.size()-1;
-    while (s <= e) {
+    while(s <= e) {
         int mid = s + (e - s) / 2;
-        //found
-        if(arr[mid] == key) 
-            return mid;
-        else if(arr[mid] < mid)  //search for left
-            e = mid -  1; //update end
-        else if(arr[mid] > mid) //search for right
-            s = mid + 1; //update start
+        if(arr[mid] == key) //found
+            return arr[mid]; //return mid
+        else if(arr[mid] > key) //not found
+            s = mid + 1; // goto right
+        else if(arr[mid] < key) //not found
+            e = mid - 1; //goto left
     }
     return -1;
 }
 
 int main(){
     //array - binary search inbuild
-    int arr[] = {1,2,3,4,5,6,7,8,9};
-    int size = 9;
-    int arrTgt = 8;
+    int arr[] = {1,2,3,4,5,6,7,8,9,542};
+    int size = 10;
+    int arrTgt = 54;
     if(binary_search(arr, arr + size, arrTgt))
         cout << "Array: Found" << endl;
     else

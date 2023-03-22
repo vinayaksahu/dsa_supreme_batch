@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 
-    int n = 5;
+/*     int n = 5;
 
     for (int i = 0; i < n; i++) {
         // spaces
@@ -30,7 +30,7 @@ int main() {
             }   
         }
         cout << endl;
-    }
+    } */
 
 /*
 
@@ -112,12 +112,12 @@ int main() {
 234
 345
 */
-
-/*     for (int i = 1; i <= n; i++) {
+    int rows = 5;
+     for (int i = 1; i <= rows; i++) {
         for (int j = i; j <= i+2; j++) {
             cout << j;
         } cout << endl;
-    }  */
+    }  
 /*
 123
 234
