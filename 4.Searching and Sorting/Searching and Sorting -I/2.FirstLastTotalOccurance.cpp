@@ -4,18 +4,19 @@
 using namespace std;
 
 int findFirstOcc(vector<int> arr, int target) {
-    int s = 0;
-    int e = arr.size() - 1;
     int ans = -1;
-    while(s <= e) {
-        int mid = s + (e - s) / 2; //find mid
-        if(arr[mid] == target) {//key found
-            ans = mid; //store ans
-            e = mid - 1;//search for left to find 1st occurance
-        } else if(arr[mid] < target) //not found - search for left
-            e = mid - 1; //update end
-        else if(arr[mid] > target) //not found - search for right
-            s = mid + 1; //update start
+    int s = 0;
+    int e = arr.size()-1;
+    while(s < e) {
+        int mid = s + (e - s) / 2;
+        if(arr[mid] == target) {
+            ans = mid;
+            e = mid - 1;
+        }
+        else if(arr[mid] < target)
+            s = mid + 1;
+        else if(arr[mid] > target)
+            e = mid - 1;
     }
     return ans;
 }
