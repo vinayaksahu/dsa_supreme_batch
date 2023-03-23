@@ -11,7 +11,7 @@ int binarySearch(vector<int> arr, int key) {
         int mid = s + (e - s) / 2; //mid
         if(key == arr[mid]) //found
             return mid;
-        else if(key < arr[mid])
+        if(key < arr[mid])
             e = mid - 1; //left search - update end
         else if(key > arr[mid])
             s = mid + 1; //right search - update start

@@ -30,7 +30,8 @@ int main() {
 
     int precision = 5;
     double step = 0.1;
-    double finalAns = ans;
+    double finalAns = ans; 
+    
     for (int i = 0; i < precision; i++) {
         for (double j = finalAns; j*j <= n; j = j + step) {
             finalAns = j;
