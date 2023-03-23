@@ -7,16 +7,16 @@ int findFirstOcc(vector<int> arr, int target) {
     int ans = -1;
     int s = 0;
     int e = arr.size()-1;
-    while(s < e) {
+    while(s <= e) {
         int mid = s + (e - s) / 2;
-        if(arr[mid] == target) {
+        if(target == arr[mid]) { //found
             ans = mid;
-            e = mid - 1;
+            e = mid - 1; //search left
         }
-        else if(arr[mid] < target)
-            s = mid + 1;
-        else if(arr[mid] > target)
-            e = mid - 1;
+        else if(target < arr[mid])
+            e = mid - 1; //search left
+        else if(target > arr[mid])
+            s = mid + 1; //search right
     }
     return ans;
 }
@@ -74,7 +74,7 @@ int main () {
     cout << "Total number of occurance: " << totalOcc << endl;
 
 /* Lower and Upper Bound */
-    int brr[] = {5, 5, 5, 6, 6, 6, 7, 7};
+    int brr[] = {4, 5, 5, 6, 6, 6, 7, 7};
     //int n = sizeof(brr) / sizeof(brr[0]);
     vector<int> v(begin(brr), end(brr));
     cout << endl << "Print array to vector" << endl;
