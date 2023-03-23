@@ -7,38 +7,37 @@ int findSqrt(int n) {
     int s = 0;
     int e = n-1;
     while(s <= e) {
-    int mid = s + (e - s) / 2;
+        int mid = s + (e - s) / 2;
         if(mid*mid == n)
             return mid;
-        if(mid*mid > n)
-            e = mid - 1;
-        else if(mid*mid < n){
-            s = mid + 1; 
+        else if(mid*mid < n) {
             ans = mid;
+            s = mid + 1; //search right
         }
+        else if(mid*mid > n)
+            e = mid - 1; //search left
     }
     return ans;
 }
 
 int main() {
 
-    int n = 26;
-    
+    int n = 50;
+
     int ans = findSqrt(n);
 
-    cout << "Squre root of " << n << " is: " << ans << endl;
+    cout << "Squar Root of " << n << " is: " << ans << endl;
 
     int precision = 5;
     double step = 0.1;
     double finalAns = ans;
-
     for (int i = 0; i < precision; i++) {
         for (double j = finalAns; j*j <= n; j = j + step) {
             finalAns = j;
-        } step = step / 10;
+        }   step = step / 10;  
     }
 
-    cout << "Squre root of in decimal" << n << " is: " << finalAns << endl;
-    
+    cout << "Squar Root of " << n << " with precision " << precision << " is: " << finalAns << endl;
+
     return 0;
 }
