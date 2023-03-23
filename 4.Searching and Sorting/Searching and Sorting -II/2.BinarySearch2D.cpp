@@ -11,7 +11,7 @@ bool binarySearch2D(vector<vector<int> > arr, int key, int row, int col) {
         int colIndex = mid % col;
         if(arr[rowIndex][colIndex] == key)
             return true;
-        else if(arr[rowIndex][colIndex] < key)
+        if(arr[rowIndex][colIndex] < key)
             s = mid + 1; //search right
         else if(arr[rowIndex][colIndex] > key)
             e = mid - 1; //search left
