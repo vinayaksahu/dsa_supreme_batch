@@ -23,8 +23,8 @@ int divide(int dividend, int divisor) {
 
 int main() {
 
-    int dividend = 22;
-    int divisor = -7;
+    int dividend = 65;
+    int divisor = 4;
 
     int ans = divide(dividend, divisor);
     cout << ans << endl;
