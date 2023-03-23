@@ -6,14 +6,14 @@ int findPeak(vector<int> arr) {
 
     int s = 0;
     int e = arr.size()-1;
-    while (s < e) {
+    while(s < e) {
         int mid = s + (e - s) / 2;
-        if(arr[mid] < arr[mid + 1])
-            s = mid + 1; //right search
-        else //if (arr[mid] > arr[mid + 1])
-            e = mid; //would be an ans at last iteration
-    }
-    return e;    
+        if(arr[mid] < arr[mid+1])
+            s = mid + 1;
+        else    
+            e = mid;
+    }    
+    return s;
 }
 
 int main () {
