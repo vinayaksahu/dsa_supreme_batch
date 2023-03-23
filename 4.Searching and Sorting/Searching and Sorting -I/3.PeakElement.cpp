@@ -3,17 +3,17 @@
 using namespace std;
 
 int findPeak(vector<int> arr) {
-
     int s = 0;
     int e = arr.size()-1;
     while(s < e) {
-        int mid = s + (e - s) / 2;
+        int mid = s + (e - s) / 2; //find mid
         if(arr[mid] < arr[mid+1])
-            s = mid + 1;
-        else    
-            e = mid;
-    }    
+            s = mid + 1; //search right
+        else //if(arr[mid] > arr[mid+1])
+            e = mid; //search left
+    }
     return s;
+    //return e;
 }
 
 int main () {
