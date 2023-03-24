@@ -2,23 +2,23 @@
 using namespace std;
 
 int divide(int dividend, int divisor) {
-    int store = 0;
+    int storeAns = 0;
     int s = 0;
     int e = abs(dividend);
     while(s <= e) {
         int mid = s + (e - s) / 2; //search for quotient
         int quotient = mid;
         if(abs(quotient*divisor) <= abs(dividend)) {
-            store = quotient; //store ans
+            storeAns = quotient; //store ans
             s = mid + 1; //Right search
         }
         else if(abs(quotient*divisor) > abs(dividend))
             e = mid - 1; //Left search
     }
     if( (dividend<0 && divisor<0) || (dividend>0 && divisor>0))
-        return store;
+        return storeAns;
     else    
-        return -store;
+        return -storeAns;
 }
 
 int main() {
