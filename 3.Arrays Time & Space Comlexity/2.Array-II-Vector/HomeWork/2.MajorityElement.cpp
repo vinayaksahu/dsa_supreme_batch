@@ -4,9 +4,8 @@
 using namespace std;
 
 void findMajority(vector<int> arr) {
-
     int maxCount = 0;
-    int index = INT_MIN;
+    int index = -1;
 
     //traverse all elements of the array to find maxCount
     for (int i = 0; i < arr.size(); i++) {
@@ -24,7 +23,6 @@ void findMajority(vector<int> arr) {
         cout << "Majority element is " << arr[index];
     else
         cout << "No majority element";
-    
 }
 
 int main() {
