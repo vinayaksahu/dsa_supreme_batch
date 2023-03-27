@@ -13,15 +13,15 @@ void findUnion(vector<int> a, vector<int> b) {
 
     vector<int> ans;
 
-    //insert elements of array 'a' to array 'ans'
+    //insert array a element in array ans
     for (int i = 0; i < a.size(); i++) {
         ans.push_back(a[i]);
     }
 
-    //insert elements of array 'b' to array 'ans'
+    //insert array b element in array ans
     for (int i = 0; i < b.size(); i++) {
         ans.push_back(b[i]);
-    }   
+    }
 
     //print
     printArray(ans);
