@@ -11,26 +11,25 @@ void printArray(vector<int> ans) {
 
 void sortZeroOne(vector<int> arr) {
 
-    vector<int> ans;
-
     //2 pointer approach
-    int start = 0;
-    int end = arr.size()-1;
+    int s = 0;
+    int e = arr.size() - 1;
     int i = 0;
-    while (i != end) {
-        if (arr[i] == 0) {
-            swap (arr[start], arr[i]);
-            start++;
+    while(s <= e) {
+        if(arr[i] == 0) {
+            swap(arr[i], arr[s]);
             i++;
-        }
-        else if (arr[i] == 1) {
-            swap (arr[end], arr[i]);
-            end--;
+            s++;
+        } else {
+            swap(arr[i], arr[e]);
+            e--;
         }
     }
 
     //print
     printArray(arr);
+
+    
 }
 
 int main() {    
