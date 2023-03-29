@@ -14,7 +14,7 @@ void selectionSort(vector<int> arr) {
     int n = arr.size();
     for (int i = 0; i < n-1; i++) {
         int min_idx = i;
-        for (int j = 0; j < n; j++) {
+        for (int j = i+1; j < n; j++) {
             if (arr[min_idx] > arr[j])
                 min_idx = j;
         }
