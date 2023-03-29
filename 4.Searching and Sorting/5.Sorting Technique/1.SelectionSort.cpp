@@ -13,15 +13,14 @@ void selectionSort(vector<int> arr) {
 
     int n = arr.size();
     for (int i = 0; i < n-1; i++) {
-        int minIndex = i;
+        int min_idx = i;
         for (int j = i+1; j < n; j++) {
-            if (arr[minIndex] > arr[j])
-                minIndex = j; //store index
+            if (arr[j] < arr[min_idx])
+                min_idx = j;
         }
-        swap (arr[minIndex], arr[i]);
+        swap (arr[min_idx], arr[i]);
     }
-
-    //print
+    //print 
     printArray(arr);
 }
  
