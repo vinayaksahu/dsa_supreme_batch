@@ -3,9 +3,7 @@ using namespace std;
 
 class Employee {
 
-    //access modifiers
     private:
-        int empId;
         int salary;
 
     public:
@@ -19,13 +17,12 @@ class Employee {
 
 };
 
-int main () {
+int main() {
 
     Employee vinayak;
 
     vinayak.setSalary(100000);
-    cout << "Salary of Employee Vinayak: " << vinayak.getSalary() << endl;
-
+    cout << "Salary of the employee: " << vinayak.getSalary() << endl;
 
     return 0;
 }
