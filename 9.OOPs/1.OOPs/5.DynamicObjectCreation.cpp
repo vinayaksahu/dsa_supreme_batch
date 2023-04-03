@@ -8,11 +8,11 @@ class Animal {
         string name;
 
         void sleep() {
-            cout << "Sleeping" << endl;
+            cout << "Sleeping." << endl;
         }
 
         void eat() {
-            cout << "Eating" << endl;
+            cout << "Eating." << endl;
         }
 };
 
@@ -26,7 +26,10 @@ int main () {
 
     cout << "Age of the dog: " << (*dog).age << endl;
     cout << "Name of the dog: " << (*dog).name << endl;
+    cout << (*dog).name << " is "; (*dog).sleep();
+    cout << (*dog).name << " is "; (*dog).eat();
 
+    cout << endl;
 
     //Alternate - dynamic creation
     Animal* cat = new Animal;
@@ -36,6 +39,8 @@ int main () {
 
     cout << "Age of the cat: " << (*cat).age << endl;
     cout << "Name of the cat: " << (*cat).name << endl; 
+    cout << cat->name << " is "; cat->sleep();
+    cout << cat->name << " is "; cat->eat();
 
     return 0;
 }
