@@ -37,8 +37,8 @@ int main () {
     cat->age = 6;
     cat->name = "Tom";
 
-    cout << "Age of the cat: " << (*cat).age << endl;
-    cout << "Name of the cat: " << (*cat).name << endl; 
+    cout << "Age of the cat: " << cat->age << endl;
+    cout << "Name of the cat: " << cat->name << endl; 
     cout << cat->name << " is "; cat->sleep();
     cout << cat->name << " is "; cat->eat();
 

@@ -11,7 +11,7 @@ class Animal {
 
 int main () {
 
-    //cout << "Size of empty class: " << sizeof(Animal);
+    //cout << "Size of Animal class: " << sizeof(Animal);
     cout << "Size of Animal class: " << sizeof(Animal); // 28 byte <= How??
                                                         //that's why here comes
                                                         //Padding & Greedy Alignment concept   
