@@ -44,14 +44,12 @@ class Animal {
             cout << "age of the animal: " << weight << endl;
             cout << "type of the animal: " << type << endl << endl;
         }
-
-
 };
 
 int main() {
 
     Animal dog; //Default contructor
-    Animal cat("cat"); //Paraeterised contructor 1 parameter
+    Animal cat("cat"); //Parameterised contructor 1 parameter
 
     //Animal elephant(5000, 50, "Asian"); //Parameterised contructor 3 parameter <- static
     Animal* elephant = new Animal(5000, 50, "Asian"); //Parameterised contructor 3 parameter <- Dynamic
