@@ -9,16 +9,23 @@ class Animal {
         int weight;
 
         //member funtion
-        void eat() {
-            cout << "Eating.";
+        void eat(Animal& dog) {
+            int dogAge = dog.age;
+            int catAge = this->age;
+            int catWeight = dog.weight;
+            cout << "Dog age: " << dogAge << endl
+                 << "Cat age: " << catAge << endl
+                 << "Cat weight: " << catWeight << endl;
         }
 };
 
 int main() {
 
-    Animal cat;
-
-    cat.eat();
+    Animal cat, dog;
+    cat.age = 4;
+    dog.age = 5;
+    dog.weight = 15;
+    cat.eat(dog);
 
     return 0;
 }
