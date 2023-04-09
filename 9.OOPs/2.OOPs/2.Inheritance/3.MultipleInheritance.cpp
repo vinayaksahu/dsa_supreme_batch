@@ -2,35 +2,39 @@
 using namespace std;
 
 class Mother {
-
-    public:
+    public: 
         string momGiven;
 
         Mother() {
             this->momGiven = "Sanskar";
-
         }
 };
 
 class Father {
-
     public:
-        string dadGiven;
+        int dadGiven;
 
         Father() {
-            this->dadGiven = "Future";
+            this->dadGiven = 100000;
         }
 };
 
-class Child:public Mother, public Father{};
+class Child : public Mother, public Father {
+    public:
+        int age;
 
-int main() {
+        Child() {
+            this->age = 25;
+        }
+};
 
-    Child yogesh;
+int main () {
 
-    cout << "Yogesh has Amma & Papa's properties are: " 
-         << yogesh.momGiven << " and " 
-         << yogesh.dadGiven << endl << endl;
+    Child* yogendra = new Child;
 
+    cout << "Yogendra ka age: " << yogendra->age << endl
+         << "Amma se mila: " << yogendra->momGiven << endl
+         << "aur Papa se mila: $" << yogendra->dadGiven << endl;
     return 0;
 }
+
