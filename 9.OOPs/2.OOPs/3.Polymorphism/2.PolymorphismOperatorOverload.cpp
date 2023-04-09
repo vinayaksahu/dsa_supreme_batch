@@ -7,7 +7,7 @@ class Sahu {
 
         int salary;
 
-        void eat(Sahu& yogesh) {
+        void operator+(Sahu& yogesh) {
             int value1 = this->salary;
             int value2 = yogesh.salary;
             cout <<(value2 - value1) << endl;
@@ -23,8 +23,8 @@ int main() {
     yogesh.salary = 200000;
 
     //this should print differet between them
-    //vinayak + yogesh;
-    vinayak.eat(yogesh); //alternate option
+    vinayak + yogesh;
+    vinayak.operator+(yogesh); //alternate option
 
     return 0;
 }
