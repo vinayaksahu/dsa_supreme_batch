@@ -8,7 +8,6 @@ class Box {
         ~Box() {
             cout << "Inside destructor" << endl;
         }
-
 };
 
 int main() {
