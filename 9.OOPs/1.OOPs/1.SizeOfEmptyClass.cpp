@@ -1,18 +1,15 @@
 #include<iostream>
 using namespace std;
 
-class Animal {
-
-int a;
-char ch;
-bool b;
+class Empty {
 
 };
 
 int main () {
 
-    //cout << "Size of empty class: " << sizeof(Animal);
-    cout << "Size of Animal class: " << sizeof(Animal);
+    Empty object;
+
+    cout << "Size of empty class: " << sizeof(Empty);
 
     return 0;
 }
