@@ -1,29 +1,32 @@
 #include<iostream>
 using namespace std;
 
-//Multi-Level Inheritance
-
+//multi Level Inheritance
 class Father {
+
     public:
+
         int worth;
 
         Father() {
-            this->worth = 1000;
+            this->worth = 100000;
         }
 };
 
-class Child:public Father {
+class Child : public Father {
 
 };
 
-class Grantchild:public Child {
+class GrantChild : public Child {
+
 
 };
 
-int main() {
+int main () {
 
-    Grantchild vinayak;
-    cout << "Grantchild worth: " << vinayak.worth;
+    GrantChild* vinay = new GrantChild;
+
+    cout << "Grant child worth: " << vinay->worth << endl;
 
     return 0;
 }
