@@ -20,12 +20,12 @@ int main () {
     //Static
     Employee vinayak;
     vinayak.setSalary(100000);
-    cout << vinayak.getSalary();
+    cout << vinayak.getSalary() << endl;
 
     //Dynamic
     Employee* yogesh = new Employee;
     yogesh->setSalary(200000);
-    cout << yogesh->getSalary();
+    cout << yogesh->getSalary() << endl;
 
     return 0;
 }

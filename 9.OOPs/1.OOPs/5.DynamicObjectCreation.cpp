@@ -1,46 +1,32 @@
 #include<iostream>
 using namespace std;
 
-class Animal {
-
+class Employee {
     public:
         int age;
-        string name;
-
-        void sleep() {
-            cout << "Sleeping." << endl;
-        }
-
-        void eat() {
-            cout << "Eating." << endl;
-        }
+        int salary;
+        string city;
 };
 
 int main () {
 
-    //Dynamic creation
-    Animal* dog = new Animal;
-
-    (*dog).age = 12;
-    (*dog).name = "Tommy";
-
-    cout << "Age of the dog: " << (*dog).age << endl;
-    cout << "Name of the dog: " << (*dog).name << endl;
-    cout << (*dog).name << " is "; (*dog).sleep();
-    cout << (*dog).name << " is "; (*dog).eat();
-
-    cout << endl;
-
-    //Alternate - dynamic creation
-    Animal* cat = new Animal;
-
-    cat->age = 6;
-    cat->name = "Tom";
-
-    cout << "Age of the cat: " << cat->age << endl;
-    cout << "Name of the cat: " << cat->name << endl; 
-    cout << cat->name << " is "; cat->sleep();
-    cout << cat->name << " is "; cat->eat();
+    //static
+    Employee vinayak;
+    vinayak.age = 28;
+    vinayak.salary = 100000;
+    vinayak.city = "Bilaspur";
+    cout << "Age of Vinayak: " << vinayak.age << endl;
+    cout << "Salary of Vinayak: " << vinayak.salary << endl;
+    cout << "City of Vinayak: " << vinayak.city << endl << endl;
+    
+    //dynamic
+    Employee* yogesh = new Employee;
+    (*yogesh).age = 26;
+    (*yogesh).salary = 200000;
+    yogesh->city = "Raipur";
+    cout << "Age of Yogesh: " << yogesh->age << endl;
+    cout << "Salary of Yogesh: " << yogesh->salary << endl;
+    cout << "City of Yogesh: " << (*yogesh).city << endl;
 
     return 0;
 }
