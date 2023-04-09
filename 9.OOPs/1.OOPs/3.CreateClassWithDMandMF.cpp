@@ -3,42 +3,49 @@ using namespace std;
 
 class Animal {
 
-    //access modifier
+    //Access modifier
     public:
-        //state - properties <= data member
+
+        //State - Properties <= Data member
         int age;
         string name;
-
-        //behaviour <= member function
+        
+        //Behaviour <= Meber function
         void eat() {
-            cout << "This type of animal eats nonveg." << endl;
-        }
-        void sleep() {
-            cout << "Sleeping." << endl;
+            cout << "Eating" << endl;
         }
 
+        void sleep() {
+            cout << "Sleeping" << endl;
+        }
 };
 
-int main () {
+int main() {
 
-    //object creation
+    //creating object
     Animal dog;
-    dog.age = 12;
-    dog.name = "Tommy";
+    //calling data member
+    dog.age = 10;
+    dog.name = "Tommy"; 
     cout << "Age of the dog: " << dog.age << endl;
     cout << "Name of the dog: " << dog.name << endl;
+    //calling member function
     dog.eat();
     dog.sleep();
 
     cout << endl;
 
+    //ceating another object
     Animal cat;
-    cat.age = 6;
+    //calling data member 
+    cat.age = 5;
     cat.name = "Tom";
     cout << "Age of the cat: " << cat.age << endl;
     cout << "Name of the cat: " << cat.name << endl;
+    //calling member function
     cat.eat();
     cat.sleep();
 
     return 0;
 }
+
