@@ -2,28 +2,27 @@
 using namespace std;
 
 class Car {
+
     public:
         int price;
-        int mileage;
 
         Car() {
-            this->price = 10000;
-            this->mileage = 15;
+            this->price = 2700000;
         }
-
 };
 
-class Scorpio: public Car {};
+class BMW : public Car {};
 
-class BMW: public Car {};
+class Audi : public Car {};
 
 int main () {
 
-    Scorpio S11;
-    BMW B11;
+    BMW* B11 = new BMW;
 
-    cout << "Price of the S11 Scorpio car: " << S11.price << endl << endl;
-    cout << "Price of the B11 BMW car: " << B11.mileage << endl;
+    cout << "Price of BMW: " << B11->price << endl;
+
+    Audi* A11 = new Audi;
+    cout << "Price of Audi: " << A11->price << endl;
 
     return 0;
 }
