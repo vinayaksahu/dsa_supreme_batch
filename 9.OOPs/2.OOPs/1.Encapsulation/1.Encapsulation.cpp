@@ -1,24 +1,20 @@
 #include<iostream>
 using namespace std;
 
-//Class apne aap me ek Encapsulation hai jo ki "Data Member" and "Member Function" wrap krke rkhta hai
-
+//class apne aap me ek encapsulation hai jo ki "data member" and "member function" ko wrap krk rkhta hai
 class Animal {
-
     public:
-        //Data Member
+        //data member
         int age;
         int weight;
 
-        //Member Function
+        //member funtion
         void eat() {
-            cout << "Eating";
+            cout << "Eating.";
         }
-
-
 };
 
-int main () {
+int main() {
 
     Animal cat;
 
