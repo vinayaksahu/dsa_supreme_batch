@@ -1,29 +1,31 @@
 #include<iostream>
 using namespace std;
 
-class Employee {
+class Animal {
 
     private:
-        int salary;
-
+        int age;
+    
     public:
-        void setSalary(int s) {
-            salary = s;
+
+        void setAge(int age) {
+            this->age = age;
         }
 
-        int getSalary() {
-            return salary;
+        int getAge() {
+            return age;
         }
         
 
 };
 
-int main() {
+int main () {
 
-    Employee vinayak;
+    Animal cow;
 
-    vinayak.setSalary(100000);
-    cout << "Salary of the employee: " << vinayak.getSalary() << endl;
+    cow.setAge(20);
+    cout << "Age of the cow is " << cow.getAge() << endl;
 
     return 0;
 }
+
