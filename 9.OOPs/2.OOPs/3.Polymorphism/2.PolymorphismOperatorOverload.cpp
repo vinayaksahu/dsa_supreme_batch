@@ -12,7 +12,6 @@ class Sahu {
             int value2 = yogesh.salary;
             cout <<(value2 - value1) << endl;
         }
-
 };
 
 int main() {
