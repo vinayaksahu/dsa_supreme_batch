@@ -5,8 +5,9 @@ class Node {
 
     public:
         
-        int data;
-        Node* next;
+        //create node parts
+        int data; //first part of node
+        Node* next; //second part of node
 
         //initialize Node "data" and "pointer" using constructor
         Node() {

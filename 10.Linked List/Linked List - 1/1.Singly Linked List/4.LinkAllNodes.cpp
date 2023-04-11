@@ -4,9 +4,11 @@ using namespace std;
 class Node {
 
     public:
-        int data;
-        Node* next;
 
+        //create node parts
+        int data; //first part of node
+        Node* next; //second part of node
+        
         Node() {
             this->data = 0;
             this->next = NULL;

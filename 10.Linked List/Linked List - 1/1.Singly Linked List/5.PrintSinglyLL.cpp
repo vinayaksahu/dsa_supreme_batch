@@ -4,9 +4,11 @@ using namespace std;
 class Node {
 
     public:
-        int data;
-        Node* next;
+        //create node parts
+        int data; //first part of node <= store data
+        Node* next; //second part of node <= store the reference to the next next node
 
+        //initialize Node "data" and "pointer" using constructor
         Node() {
             this->data = 0;
             this->next = NULL;
@@ -28,7 +30,7 @@ void print (Node* &head) {
 }
 
 int main() {
-
+    //create individual nodes
     Node* first = new Node(10); //node created named "first" pointing to NULL
     Node* second = new Node(20); //node created named "second" pointing to NULL
     Node* third = new Node(30); //node created named "third" pointing to NULL
