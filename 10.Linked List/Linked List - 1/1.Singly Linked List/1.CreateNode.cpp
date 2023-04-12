@@ -6,13 +6,13 @@ class Node {
     public:
 
         //create node
-        int data; //first part of node
-        Node* next; //second part of node
+        int data; //first part of node => integer data
+        Node* next; //second part of node => next pointer
 };
 
 int main () {
 
-    Node* head = new Node; //node created named "head"
+    Node* head = new Node(); //node created named "head"
 
     return 0;
 }

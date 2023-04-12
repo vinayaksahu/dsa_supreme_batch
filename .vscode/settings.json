@@ -9,6 +9,7 @@
         "bitset": "cpp",
         "chrono": "cpp",
         "algorithm": "cpp",
-        "atomic": "cpp"
+        "atomic": "cpp",
+        "new": "cpp"
     }
 }

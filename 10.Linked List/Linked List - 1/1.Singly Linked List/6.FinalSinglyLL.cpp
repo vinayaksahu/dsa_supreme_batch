@@ -4,7 +4,6 @@ using namespace std;
 class Node {
 
     public:
-
         int data;
         Node* next;
 
@@ -16,30 +15,30 @@ class Node {
 
 void print(Node* &head) {
     Node* temp = head;
-    while (temp != NULL) {
+    while(temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     }
 }
 
-int main () {
+int main() {
 
-    //create nodes
     Node* first = new Node(10);
     Node* second = new Node(20);
     Node* third = new Node(30);
     Node* fourth = new Node(40);
     Node* fifth = new Node(50);
 
-    //link all nodes
+    //link aa nodes
     first->next = second;
     second->next = third;
     third->next = fourth;
     fourth->next = fifth;
 
     //print
-    cout << "Print Singly Linked List:" << endl;
-    print(first);
+    cout << "Print Linked List: " << endl;
+
+    print(first); 
 
     return 0;
 }

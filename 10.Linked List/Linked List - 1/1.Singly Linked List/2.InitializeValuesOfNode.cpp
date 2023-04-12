@@ -24,7 +24,7 @@ class Node {
 
 int main() {
 
-    Node* head = new Node(); //create object for Node class
+    Node* head = new Node(10); //create object for Node class
 
     return 0;
 }
