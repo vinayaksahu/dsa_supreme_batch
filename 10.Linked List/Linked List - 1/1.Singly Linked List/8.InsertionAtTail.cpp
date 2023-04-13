@@ -37,6 +37,9 @@ int main() {
 
     //insertion
     insertAtTail(tail, 10);
+    insertAtTail(tail, 20);
+    insertAtTail(tail, 30);
+    insertAtTail(tail, 40);
 
     //print
     print(tail);
