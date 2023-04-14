@@ -121,10 +121,10 @@ void deleteNode(Node* &head, Node* &tail, int position) {
 
     //delete first node
     if (position == 1) {
-        Node* temp = head;
-        head = head->next;
-        temp->next = NULL;
-        delete temp;
+        Node* temp = head; //head ko temp nam rkho
+        head = head->next; //head k next ko head bnao
+        temp->next = NULL; //temp ko null kr do
+        delete temp; //delete kr do
         return;
     }
     
@@ -140,7 +140,7 @@ void deleteNode(Node* &head, Node* &tail, int position) {
             i++;
         }
 
-        //prev->Null ko null kr diya
+        //prev->next ko null kr diya
         prev->next = NULL;
         //update tail
         Node* temp = tail;
