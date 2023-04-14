@@ -135,7 +135,7 @@ void deleteNode(Node* &head, Node* &tail, int position) {
         //find prev of tail
         int i = 1;
         Node* prev = head;
-        while (i < len-1) {
+        while (i < position-1) {
             prev = prev->next;
             i++;
         }
@@ -151,7 +151,18 @@ void deleteNode(Node* &head, Node* &tail, int position) {
     }
 
     //delete middle node
+    //  find prev and next
+    int i = 1;
+    Node* prev = head;
+    while(i < position - 1) {
+        prev = prev->next;
+        i++;
+    } Node* curr = prev->next;
     
+    //connect previous to current ka next
+    prev->next = curr->next;
+    //delete current node
+    delete curr;
 }
 
 int main() {
@@ -193,10 +204,10 @@ int main() {
     cout << "Tail: " << tail->data << endl
          << endl;
 
-    /******************************************************/
+/******************************************************/
 
     //delete node
-    position = 5;
+    position = 3;
     cout << "Delete: " << position << endl;
     deleteNode(head, tail, position);
 

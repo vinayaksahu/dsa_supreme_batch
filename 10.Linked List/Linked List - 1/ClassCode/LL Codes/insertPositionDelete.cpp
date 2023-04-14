@@ -152,7 +152,7 @@ void deleteNode(int position, Node* &head, Node* &tail) {
         //deleting middle node
 
         //step  : find prev and curr
-        int i =1;
+        int i = 1;
         Node* prev = head;
         while( i < position-1) {
                 prev= prev -> next;
