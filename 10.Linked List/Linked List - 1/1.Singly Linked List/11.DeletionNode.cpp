@@ -8,7 +8,10 @@ class Node {
         Node(int data) {
             this->data = data;
             this->next = NULL;
-        } 
+        }  
+        ~Node() {
+            cout << "Node with value " << this->next << " deleted " << endl;;
+        }
 };
 
 int findLength(Node* head) {
@@ -109,6 +112,48 @@ void insertAtPosition(Node* &head, Node* &tail, int data, int position) {
     prev->next = newnode;
 }
 
+void deleteNode(Node* &head, Node* &tail, int position) {
+    //check for empty
+    if (head == NULL) {
+        cout << "Linked list is empty" << endl;
+        return; 
+    }
+
+    //delete first node
+    if (position == 1) {
+        Node* temp = head;
+        head = head->next;
+        temp->next = NULL;
+        delete temp;
+        return;
+    }
+    
+
+    //delete last node
+    int len = findLength(head);
+    if (position == len) {
+        //find prev of tail
+        int i = 1;
+        Node* prev = head;
+        while (i < len-1) {
+            prev = prev->next;
+            i++;
+        }
+
+        //prev->Null ko null kr diya
+        prev->next = NULL;
+        //update tail
+        Node* temp = tail;
+        tail = prev;
+        //delete last node
+        delete temp;
+        return;
+    }
+
+    //delete middle node
+    
+}
+
 int main() {
 
     Node* head = NULL;
@@ -130,12 +175,13 @@ int main() {
     cout << "Tail: " << tail->data << endl;
 
     //lenght of above LL
-    cout << "Length: "<< findLength(head) << endl << endl;
+    cout << "Length: "<< findLength(head) << endl 
+         << endl;
 
 /******************************************************/
 
     //insert at position
-    int position = 1;
+    int position = 0;
     cout << "Insert Position: " << position << endl;
     insertAtPosition(head, tail, 500, position);
 
@@ -144,11 +190,23 @@ int main() {
 
     //print head & tail
     cout << "Head: " << head->data << endl;
-    cout << "Tail: " << tail->data << endl << endl;
+    cout << "Tail: " << tail->data << endl
+         << endl;
 
     /******************************************************/
 
     //delete node
+    position = 5;
+    cout << "Delete: " << position << endl;
+    deleteNode(head, tail, position);
+
+    //print
+    print(head);
+
+    //print head & tail
+    cout << "Head: " << head->data << endl;
+    cout << "Tail: " << tail->data << endl;
+
     
     return 0;
 }

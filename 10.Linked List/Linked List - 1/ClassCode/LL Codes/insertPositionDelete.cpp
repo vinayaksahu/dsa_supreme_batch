@@ -129,7 +129,6 @@ void deleteNode(int position, Node* &head, Node* &tail) {
         }
         int len  = findLength(head);
 
-
         //deleting last node
         if(position == len) {
                 //find prev
@@ -182,20 +181,22 @@ int main() {
 
         print(head);
         cout << endl;
-        // cout << "head: " << head -> data << endl;
-        // cout << "tail: " << tail->data << endl;
+/*         cout << "head: " << head -> data << endl;
+        cout << "tail: " << tail->data << endl;
 
-        // insertAtPosition(101, 5, head, tail);
-        // cout<< "Printing after insert at position call" << endl;
-        // print(head);
-        // cout << endl;
-        // cout << "head: " << head -> data << endl;
-        // cout << "tail: " << tail->data << endl;
+        insertAtPosition(101, 5, head, tail);
+        cout<< "Printing after insert at position call" << endl;
+        print(head);
+        cout << endl;
+        cout << "head: " << head -> data << endl;
+        cout << "tail: " << tail->data << endl; */
 
-        deleteNode(9, head, tail);
+        deleteNode(5, head, tail);
         cout << endl;
         print(head);
         cout << endl;
+        cout << "head: " << head->data << endl;
+        cout << "tail: " << tail->data << endl;
 
         return 0;
 }
