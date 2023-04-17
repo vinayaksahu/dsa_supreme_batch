@@ -161,6 +161,22 @@ void deleteNode(Node* &head, Node* &tail, int position) {
 
 }
 
+Node* reverse(Node* &prev, Node* &curr) {
+    //base case
+    if(curr == NULL) {
+        //LL reversed to new LL ka head will be prev
+        return prev;
+    }
+    
+    //1 case solve kr do
+    Node* forw = curr->next;
+    curr->next = prev;
+    //forw->next = curr;
+
+    //baki recursion sambhal lega
+    reverse(curr, forw);
+}
+
 int main() {
 
     //create independant node
@@ -228,6 +244,21 @@ int main() {
     position = 3;
     cout << "Position to delete node: " << position << endl;
     deleteNode(head, tail, position);
+
+    //print
+    print(head);
+    len =  findLength(head);
+    cout << "Length: " << len << endl
+         << endl; 
+
+
+/**************************************************************/
+
+    //Reverse
+    Node* prev = NULL;
+    Node* curr = head;
+    cout << "Reverse above Linked List: " << endl;
+    head = reverse(prev, curr);
 
     //print
     print(head);
