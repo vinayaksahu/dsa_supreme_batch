@@ -44,20 +44,20 @@ void insertAtHead(Node* &head, Node* &tail, int data) {
     head = newnode;   
 }
 
-Node* reverse(Node* &prev, Node* &curr) {
-    //base case
-    if(curr == NULL) {
-        //LL reversed to new LL ka head will be prev
-        return prev;
-    }
+Node* reverse(Node* &head) {
     
-    //1 case solve kr do
-    Node* forw = curr->next;
-    curr->next = prev;
-    //forw->next = curr;
+    Node* prev = NULL;
+    Node* curr = head;
 
-    //baki recursion sambhal lega
-    reverse(curr, forw);
+    while (curr != NULL) {
+        //process
+        Node* temp = curr->next;
+        curr->next = prev;
+        //update
+        prev = curr;
+        curr = temp;
+    }
+    return prev;
 }
 
 int main() {
@@ -68,7 +68,7 @@ int main() {
 /**************************************************************/
 
     //insert at head
-    cout << "Insert at head: " << endl;
+    cout << "Given Linked List: " << endl;
     insertAtHead(head, tail, 5);
     insertAtHead(head, tail, 4);
     insertAtHead(head, tail, 3);
@@ -80,11 +80,11 @@ int main() {
 
 /**************************************************************/
 
-    //Reverse
+    //Reverse using Loop
     Node* prev = NULL;
     Node* curr = head;
     cout << "Reverse above Linked List: " << endl;
-    head = reverse(prev, curr);
+    head = reverse(head);
 
     //print
     print(head);
