@@ -49,7 +49,7 @@ int main() {
     int length = findLength(head);
     cout << "Length: " << length << endl;
 
-    //find middle
+    //find middle element
     int middle = 0;
     if(length % 2 == 0)
         middle = length / 2 + 1;
