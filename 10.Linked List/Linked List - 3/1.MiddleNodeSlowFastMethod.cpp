@@ -23,25 +23,23 @@ void print(Node* &head) {
 //getMiddle
 Node* getmiddle(Node* &head) {
 
-    //if LL is empty
-    if(head == NULL) {
-        cout << "Empty";
+    //if LL is Empty
+    if(head == NULL)
         return head;
-    }
 
-    //if LL has one node
+    //if LL has node
     if(head->next == NULL)
         return head;
 
     //if LL > 1 node
-    Node* slow = head;
     Node* fast = head;
+    Node* slow = head;
     while (slow != NULL && fast != NULL) {
         fast = fast->next;
-        if(fast != NULL) {
+        if (fast != NULL) {
             fast = fast->next;
             slow = slow->next;
-        }
+        }   
     }
     return slow;
 }
@@ -53,11 +51,13 @@ int main() {
     Node* second = new Node(30);
     Node* third = new Node(40);
     Node* fourth = new Node(50);
+    //Node* fifth = new Node(50);
 
     head->next = first;
     first->next = second;
     second->next = third;
     third->next = fourth;
+    //fourth->next = fifth;
 
     //print
     print(head);
