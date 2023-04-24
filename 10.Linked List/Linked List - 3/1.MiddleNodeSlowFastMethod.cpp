@@ -41,7 +41,7 @@ Node* getmiddle(Node* &head) {
             slow = slow->next;
         }   
     }
-    return slow;
+    return slow; 
 }
 
 int main() {
