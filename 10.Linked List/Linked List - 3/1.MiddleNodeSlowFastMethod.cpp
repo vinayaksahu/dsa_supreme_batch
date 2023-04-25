@@ -23,25 +23,27 @@ void print(Node* &head) {
 //getMiddle
 Node* getmiddle(Node* &head) {
 
-    //if LL is Empty
-    if(head == NULL)
+    //if LL is empty
+    if (head == NULL) {
         return head;
-
-    //if LL has node
-    if(head->next == NULL)
+    }
+    
+    //if LL has 1 node
+    if (head->next == NULL) {
         return head;
+    }
 
     //if LL > 1 node
-    Node* fast = head;
     Node* slow = head;
-    while (slow != NULL && fast != NULL) {
+    Node* fast = head;
+    while (fast != NULL) {
         fast = fast->next;
         if (fast != NULL) {
             fast = fast->next;
             slow = slow->next;
-        }   
+        }
     }
-    return slow; 
+    return slow;
 }
 
 int main() {
