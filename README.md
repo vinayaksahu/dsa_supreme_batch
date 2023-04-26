@@ -1,28 +1,27 @@
 # Recent Running Topic	
+    
+    Stacks
 
 ### Star/Alphabet-Numeric(Palidrome/Floyd/Pascal)
 
-    Rectangle-Solid/Hollow
-
-    Pyramid(Triangle)-L/R/F(N/E/O)/Flip-I/H
-
-    Diamond-L/R/F/Flip-H 
-
-    and some fancy Patterns
-
-### Note
-    L-Left
-
-    R-Right
-
-    F-Full
-
-    N-Natural
-
-    E-Even
-
-    O-Odd
-
-    I-Inverse
-
-    H-Hollow
+    Basics of programming - I
+    
+    Basics of programming - II
+    
+    Array Time & Space Complexity
+    
+    Searching and Sorting
+    
+    Char Arrays and Strings 
+    
+    Basic Maths and Pointers
+    
+    Recursion and Backtracking
+    
+    Devide & Conquer, Time complexity & Space complexity
+    
+    OOPs
+    
+    Linked Lists
+    
+    Stacks...

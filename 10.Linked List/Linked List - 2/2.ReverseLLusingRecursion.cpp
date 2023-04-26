@@ -46,17 +46,18 @@ void insertAtHead(Node* &head, Node* &tail, int data) {
 
 Node* reverse(Node* &prev, Node* &curr) {
     //base case
-    if (curr == NULL)
+    if(curr == NULL)
         return prev;
-    
+
     //1 case
-    Node* temp = curr->next;
+    Node* forw = curr->next;
     curr->next = prev;
+    //update
     prev = curr;
-    curr = temp;
+    curr = forw;
 
     //recursion
-    return reverse(prev, curr);
+    return reverse(prev, forw);
 }
 
 int main() {
@@ -82,8 +83,7 @@ int main() {
     //Reverse using Reursion
     Node* prev = NULL;
     Node* curr = head;
-    cout << "Reverse above Linked List: " << endl;
-    head = reverse(prev, curr);
+    reverse(prev, curr);
 
     //print
     print(head);
