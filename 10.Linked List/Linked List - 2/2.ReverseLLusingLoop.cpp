@@ -45,17 +45,14 @@ void insertAtHead(Node* &head, Node* &tail, int data) {
 }
 
 Node* reverse(Node* &head) {
-    
     Node* prev = NULL;
     Node* curr = head;
 
     while (curr != NULL) {
-        //process
-        Node* temp = curr->next;
+        Node* forw = curr->next;
         curr->next = prev;
-        //update
         prev = curr;
-        curr = temp;
+        curr = forw;
     }
     return prev;
 }
