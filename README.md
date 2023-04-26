@@ -2,7 +2,7 @@
     
     Stacks
 
-### Star/Alphabet-Numeric(Palidrome/Floyd/Pascal)
+## Topic completed
 
     Basics of programming - I
     
