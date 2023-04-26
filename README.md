@@ -6,7 +6,7 @@
 
      1. Basics of programming - I
     
-     2. Basics of programming - II
+     2. Basics of programming - II (Patterns)
     
      3. Array Time & Space Complexity
     
