@@ -4,24 +4,47 @@
 
 ## Topic completed
 
-    Basics of programming - I
+    1. Basics of programming - I
     
-    Basics of programming - II
+    2. Basics of programming - II
     
-    Array Time & Space Complexity
+    3. Array Time & Space Complexity
     
-    Searching and Sorting
+    4. Searching and Sorting
     
-    Char Arrays and Strings 
+    5. Char Arrays and Strings 
     
-    Basic Maths and Pointers
+    6. Basic Maths and Pointers
     
-    Recursion and Backtracking
+    7. Recursion and Backtracking
     
-    Devide & Conquer, Time complexity & Space complexity
+    8. Devide & Conquer, Time complexity & Space complexity
     
-    OOPs
+    9. OOPs
     
-    Linked Lists
+    10. Linked Lists
     
-    Stacks...
+    11. Stacks
+
+## Topic to be covered
+
+    12. Queues
+
+    13. Trees - I & II
+
+    14. Heaps
+
+    15. Maps & Tries
+
+    16. Graphs - I & II
+
+    17. Dynamic Programming - I & II
+
+### Bonus Topic
+
+    18. Sliding window
+
+    19. Greedy Algorithm
+
+    20. Bit Manupulation
+
