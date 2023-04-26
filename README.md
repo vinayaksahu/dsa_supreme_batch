@@ -1,26 +1,26 @@
 # Recent Running Topic	
     
-    Stacks
+    11. Stacks
 
 ## Topic completed
 
-    1. Basics of programming - I
+     1. Basics of programming - I
     
-    2. Basics of programming - II
+     2. Basics of programming - II
     
-    3. Array Time & Space Complexity
+     3. Array Time & Space Complexity
     
-    4. Searching and Sorting
+     4. Searching and Sorting
     
-    5. Char Arrays and Strings 
+     5. Char Arrays and Strings 
     
-    6. Basic Maths and Pointers
+     6. Basic Maths and Pointers
     
-    7. Recursion and Backtracking
+     7. Recursion and Backtracking
     
-    8. Devide & Conquer, Time complexity & Space complexity
+     8. Devide & Conquer, Time complexity & Space complexity
     
-    9. OOPs
+     9. OOPs
     
     10. Linked Lists
     
@@ -47,4 +47,3 @@
     19. Greedy Algorithm
 
     20. Bit Manupulation
-
