@@ -3,31 +3,48 @@ using namespace std;
 
 class Node {
     public:
-    int data;
-    Node* next;
+        int data;
+        Node* next;
 
-    Node(int data) {
-        this->data = data;
-        this->next = NULL;
-    }
+        Node(int data) {
+            this->data = data;
+            this->next = NULL;
+        }
 };
 
 void print(Node* &head) {
     Node* temp = head;
-    while(temp != NULL) {
+    while (temp != NULL) {
         cout << temp->data << " ";
         temp = temp->next;
     } cout << endl;
 }
 
-int findLength(Node* &head) {
-    Node* temp = head;
-    int len = 0;
-    while(temp != NULL) {
-        temp = temp->next;
-        len++;
+/* Node* getMiddle(Node* &head) {
+
+    //if LL is null
+    if(head == NULL)
+        return head;
+
+    //LL has 1 node
+    if(head->next == NULL)
+        return head;
+
+    //LL has > 1 node
+    Node* slow = head;
+    Node* fast = head;
+    while (fast != NULL) {
+        fast = fast->next;
+        if (fast != NULL) {
+            fast = fast->next;
+            slow = slow->next;
+        }
     }
-    return len;
+    return slow;
+} */
+
+Node* getMiddle(Node* &head) {
+    
 }
 
 int main() {
@@ -36,27 +53,20 @@ int main() {
     Node* first = new Node(20);
     Node* second = new Node(30);
     Node* third = new Node(40);
+    Node* fourth = new Node(50);
 
-    //connet
     head->next = first;
     first->next = second;
     second->next = third;
+    third->next = fourth;
 
-    //print
+    //print 
     print(head);
 
-    //find length
-    int length = findLength(head);
-    cout << "Length: " << length << endl;
+    //middle
+    //cout << "Middle (Tortois algorithm): " << getMiddle(head)->data; // slow & fast method
 
-    //find middle element
-    int middle = 0;
-    if(length % 2 == 0)
-        middle = length / 2 + 1;
-    else
-        middle = length / 2;
-
-    cout << "Middle: " << middle << endl;
+    cout << "Middle: " << getMiddle(head)->data;
 
     return 0;
 }
