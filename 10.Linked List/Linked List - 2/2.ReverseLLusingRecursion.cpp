@@ -83,7 +83,7 @@ int main() {
     //Reverse using Reursion
     Node* prev = NULL;
     Node* curr = head;
-    reverse(prev, curr);
+    head = reverse(prev, curr);
 
     //print
     print(head);
