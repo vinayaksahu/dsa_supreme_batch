@@ -56,7 +56,7 @@ Node* reverse(Node* &prev, Node* &curr) {
     prev = curr;
     curr = forw;
 
-    //recursion
+    //recursion 
     return reverse(prev, forw);
 }
 
