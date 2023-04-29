@@ -20,6 +20,21 @@ void print(Node* &head) {
     } cout << endl;
 }
 
+//getMiddle - revision
+/* Node* getmiddle(Node* & head) {
+    Node* slow = head;
+    Node* fast = head;
+    while (fast != NULL) {
+        fast = fast->next;
+        if(fast != NULL) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+    }
+    return slow;
+}
+ */
+
 //getMiddle
 Node* getmiddle(Node* &head) {
 
@@ -35,7 +50,8 @@ Node* getmiddle(Node* &head) {
 
     //if LL > 1 node
     Node* slow = head;
-    Node* fast = head;
+    //Node* fast = head; //for odd nodes of LL only
+    Node* fast = head->next; //for even nodes of LL only
     while (fast != NULL) {
         fast = fast->next;
         if (fast != NULL) {
@@ -46,6 +62,7 @@ Node* getmiddle(Node* &head) {
     return slow;
 }
 
+
 int main() {
 
     Node* head = new Node(10);
@@ -53,13 +70,13 @@ int main() {
     Node* second = new Node(30);
     Node* third = new Node(40);
     Node* fourth = new Node(50);
-    //Node* fifth = new Node(50);
+    Node* fifth = new Node(60);
 
     head->next = first;
     first->next = second;
     second->next = third;
     third->next = fourth;
-    //fourth->next = fifth;
+    fourth->next = fifth;
 
     //print
     print(head);
