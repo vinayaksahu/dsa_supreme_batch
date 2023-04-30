@@ -41,7 +41,7 @@ bool checkPalindrome(Node* &head) {
         Node* slow = head;
         Node* fast = head -> next;
 
-        while(fast != NULL) {
+        while(head != NULL) {
                 fast = fast -> next;
                 if(fast != NULL) {
                         fast = fast -> next;
