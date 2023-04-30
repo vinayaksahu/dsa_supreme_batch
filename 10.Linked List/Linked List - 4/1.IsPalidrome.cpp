@@ -32,8 +32,7 @@ Node* reverse(Node* &head) {
     return prev;
 }
 
-bool checkPalidrome(Node* &head) {
-    //find middle
+Node* findMiddle(Node* &head) {
     Node* slow = head;
     Node* fast = head->next;
     while (fast != NULL) {
@@ -43,10 +42,15 @@ bool checkPalidrome(Node* &head) {
             slow = slow->next; //middle node
         }   
     }
+    return slow;
+}
+
+bool checkPalidrome(Node* &head) {
+    //find middle
+    Node* middle = findMiddle(head);
 
     //reverse LL after middle
-    Node* reverseLLkaHead = reverse(slow->next);
-    slow->next = reverseLLkaHead;
+    Node* reverseLLkaHead = reverse(middle->next);
 
     //start comparing both halves
     Node* temp1 = head;
@@ -67,7 +71,7 @@ int main() {
 
     Node* head = new Node(10);
     Node* first = new Node(20);
-    Node* second = new Node(80);
+    Node* second = new Node(30);
     Node* third = new Node(30);
     Node* fourth = new Node(20);
     Node* fifth = new Node(10);
