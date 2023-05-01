@@ -1,6 +1,6 @@
 # Recent Running Topic	
     
-    11. Stacks
+    12. Queues
 
 ## Topic completed
 
@@ -26,9 +26,9 @@
     
     11. Stacks
 
-## Topic to be covered
-
     12. Queues
+
+## Topic to be covered
 
     13. Trees - I & II
 
