@@ -49,20 +49,18 @@ bool checkPalidrome(Node* &head) {
     //find middle
     Node* middle = findMiddle(head);
 
-    //reverse LL after middle
-    Node* reverseLLkaHead = reverse(middle->next);
+    //reverse from the middle
+    Node* reverseNodeKaHead = reverse(middle->next);
 
-    //start comparing both halves
+    //compare
     Node* temp1 = head;
-    Node* temp2 = reverseLLkaHead;
+    Node* temp2 = reverseNodeKaHead;
     while (temp2 != NULL) {
-        if(temp1->data != temp2->data) {
+        if (temp1->data != temp2->data) {
             return false;
         }
-        else {
-            temp1 = temp1->next;
-            temp2 = temp2->next;
-        }
+        temp1 = temp1->next;
+        temp2 = temp2->next;
     }
     return true;
 }
