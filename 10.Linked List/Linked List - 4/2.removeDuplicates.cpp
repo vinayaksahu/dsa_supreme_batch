@@ -20,6 +20,11 @@ void print(Node* &head) {
 }
 
 void removeDuplicates(Node* &head) {
+
+    if (head == NULL) {
+            return;
+    }
+
     Node* curr = head;
     while (curr != NULL) {
         if((curr->next != NULL) && (curr->data == curr->next->data)) {
