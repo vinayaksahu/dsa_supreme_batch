@@ -19,6 +19,34 @@ void print(Node* &head) {
     } cout << endl;
 }   
 
+int findNoOfNodes(Node* &head) {
+    Node* temp = head;
+    int count = 1;
+    while (temp != NULL) {
+        temp = temp->next;
+        count++;
+    }
+    return count;
+}
+
+Node* findMiddle(Node* &head) {
+    int NoOfNodes = findNoOfNodes(head);
+    Node* slow = head;
+    Node* fast = NULL;
+    if(NoOfNodes % 2 == 0)
+        fast = head->next;
+    else
+        fast = head;
+    while (fast != NULL) {
+        fast = fast->next;
+        if (fast != NULL) {
+            fast = fast->next;
+            slow = slow->next; //middle node
+        }   
+    }
+    return slow;
+}
+
 Node* reverse(Node* &head) {
     Node* prev = NULL;
     Node* curr = head;
@@ -30,19 +58,6 @@ Node* reverse(Node* &head) {
         curr = forw;
     }
     return prev;
-}
-
-Node* findMiddle(Node* &head) {
-    Node* slow = head;
-    Node* fast = head->next;
-    while (fast != NULL) {
-        fast = fast->next;
-        if (fast != NULL) {
-            fast = fast->next;
-            slow = slow->next; //middle node
-        }   
-    }
-    return slow;
 }
 
 bool checkPalidrome(Node* &head) {
@@ -71,14 +86,16 @@ int main() {
     Node* first = new Node(20);
     Node* second = new Node(30);
     Node* third = new Node(30);
-    Node* fourth = new Node(20);
-    Node* fifth = new Node(10);
+    Node* fourth = new Node(30);
+    Node* fifth = new Node(20);
+    Node* sixth = new Node(10);
 
     head->next = first;
     first->next = second;
     second->next = third;
     third->next = fourth;
     fourth->next = fifth;
+    fifth->next = sixth;
 
     print(head);
 
