@@ -19,7 +19,7 @@ void insertAtTail(Node* &tail, int data) {
     //step:2 - link tail node to new node
     tail->next = newNode;
 
-    //step:3 - assign new node as tail node
+    //step:3 - assign new node as tail node - update tail
     tail = newNode;
 }
 
