@@ -21,6 +21,23 @@ void print(Node* &head) {
 
 void removeDuplicates(Node* &head) {
 
+    if(head == NULL)
+        return;
+
+    Node* curr = head;
+    while (curr != NULL) {
+        if ((curr->next != NULL) && (curr->data == curr->next->data)) {
+            Node* temp = curr->next;
+            curr->next = curr->next->next;
+            temp->next = NULL;
+            delete temp;
+        } else {
+            curr = curr->next;
+        }  
+    }
+}
+/* void removeDuplicates(Node* &head) {
+
     if (head == NULL) {
             return;
     }
@@ -37,7 +54,7 @@ void removeDuplicates(Node* &head) {
             curr = curr->next;
         }
     }
-}
+} */
 
 int main() {
 

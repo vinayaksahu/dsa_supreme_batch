@@ -36,14 +36,14 @@
 
     15. Maps & Tries
 
-    16. Graphs - I & II
+    16.Graphs - I & II
 
-    17. Dynamic Programming - I & II
+    17.Dynamic Programming - I & II
 
 ### Bonus Topic
 
-    18. Sliding window
+    18.Sliding window
 
-    19. Greedy Algorithm
+    19.Greedy Algorithm
 
-    20. Bit Manupulation
+    20.Bit Manupulation
