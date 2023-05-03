@@ -19,7 +19,7 @@ void print(Node* &head) {
     } cout << endl;
 }
 
-void sort012DataReplacement(Node* &head) {
+/* void sort012DataReplacement(Node* &head) {
 
     // step A: count 0 1 2
     int zero = 0;
@@ -53,7 +53,7 @@ void sort012DataReplacement(Node* &head) {
         temp->data = 2;
         temp = temp->next;
     }
-}
+} */
 
 Node* sort012PointersReplacement(Node* &head) {
 
@@ -67,7 +67,7 @@ Node* sort012PointersReplacement(Node* &head) {
     Node* twoHead = new Node(-1);
     Node* twoTail = twoHead;
 
-    //step B: traverse LL (Isolate nodes and add related dummy nodes)
+    //step B: traverse the original LL (Isolate nodes and add with related dummy nodes)
     Node* curr = head;
     while (curr != NULL) {
 
@@ -106,7 +106,12 @@ Node* sort012PointersReplacement(Node* &head) {
     //step C:
     //1: remove dummy nodes
 
-    Node* temp = oneHead;
+    Node* temp = zeroHead;
+    zeroHead = zeroHead->next;
+    temp->next = NULL;
+    delete temp;
+
+    temp = oneHead;
     oneHead = oneHead->next;
     temp->next = NULL;
     delete temp;
@@ -125,11 +130,6 @@ Node* sort012PointersReplacement(Node* &head) {
         if(twoHead != NULL)
             zeroTail->next = twoHead;
     }
-
-    temp = zeroHead;
-    zeroHead = zeroHead->next;
-    temp->next = NULL;
-    delete temp;
 
     //3: return head of dummy LL
     return zeroHead;
