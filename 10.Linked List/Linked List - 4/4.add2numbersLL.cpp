@@ -69,13 +69,13 @@ Node* add2Num(Node* &head1, Node* &head2) {
     }
     
     while (head2 != NULL) {
-        int sum = carry + head1->data;
+        int sum = carry + head2->data;
         int digit = sum % 10;
         int carry = sum / 10;
         Node* newNode = new Node(digit);
         ansTail->next = newNode;
         ansTail = newNode;
-        head2 = head1->next;
+        head2 = head2->next;
     }
 
     while (carry != 0) {
