@@ -1,6 +1,6 @@
 # Recent Running Topic	
     
-    12. Queues
+    13. Trees - I & II
 
 ## Topic completed
 
@@ -28,9 +28,9 @@
 
     12. Queues
 
-## Topic to be covered
-
     13. Trees - I & II
+
+## Topic to be covered
 
     14. Heaps
 
