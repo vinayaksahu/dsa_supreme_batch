@@ -13,24 +13,25 @@ int main() {
     s.push(30);
     s.push(40);
     s.push(50);
+    s.push(60);
 
-    //remove top element
+    //deletion
     s.pop();
 
-    //check element on top
-    cout << "Top element of the array: " <<s.top() << endl; 
+    //top element
+    cout << "top element: " << s.top() << endl;
 
     //size
-    s.size();
+    cout << "no. of elements in stack: " << s.size() << endl;
 
-    //isEmpty
+    //check empty or not
     if(!s.empty())
-        cout << "Stack is empty." << endl;
-    else
-        cout << "Stack is not empty." << endl;
+        cout << "Not Empty." << endl;
+    else 
+        cout << "Empty." << endl;
 
-    //print element of the stack
-    while (!s.empty()) {
+    //print stack element
+    while (!s.empty()){
         cout << s.top() << " ";
         s.pop();
     } cout << endl;

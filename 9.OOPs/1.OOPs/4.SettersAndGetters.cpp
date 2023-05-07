@@ -15,8 +15,6 @@ class Animal {
         int getAge() {
             return age;
         }
-        
-
 };
 
 int main () {
