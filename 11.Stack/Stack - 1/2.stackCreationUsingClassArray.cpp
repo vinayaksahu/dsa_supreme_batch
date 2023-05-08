@@ -11,7 +11,7 @@ class Stack {
     public: 
         //constructor
         Stack(int size) {
-            arr = new int[top];
+            arr = new int[size];
             this->size = size;
             top = -1;
         }
