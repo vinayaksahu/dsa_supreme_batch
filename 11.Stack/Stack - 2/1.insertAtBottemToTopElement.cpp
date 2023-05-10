@@ -2,14 +2,10 @@
 #include<stack>
 using namespace std;
 
-void findMiddle(stack<int> &s, int &totalSize, int element) {
+void solve(stack<int> &s, int topElement) {
     //base case
-    if(s.size() == 0) {
-        cout  << "Empty stack." << endl;
-        return;
-    }
-    if(s.size() == totalSize/2 + 1) {
-        s.push(element);
+    if(s.empty()) {
+        s.push(topElement);
         return;
     }
 
@@ -17,10 +13,23 @@ void findMiddle(stack<int> &s, int &totalSize, int element) {
     s.pop();
 
     //recursion
-    findMiddle(s, totalSize, element);
+    solve(s, topElement);
 
     //backtrack
     s.push(temp);
+}
+
+void insertAtBottomToTopElement(stack<int> &s) {
+    //empty stack
+    if (s.empty()) {
+        cout << "Stack underflow.";
+        return;
+    }
+    
+    int topElement = s.top();
+
+    solve(s, topElement);
+
 }
 
 void print(stack<int> s) {
@@ -43,12 +52,10 @@ int main() {
     s.push(60);
     s.push(70);
 
-    int element = 100;
-    int totalSize = s.size();
-    findMiddle(s, totalSize, element);
+    //insert top element at bottom
+    insertAtBottomToTopElement(s);
 
-    print(s);
-
+    //print
     print(s);
 
     return 0;

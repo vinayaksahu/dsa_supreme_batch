@@ -2,13 +2,9 @@
 #include<stack>
 using namespace std;
 
-void findMiddle(stack<int> &s, int &totalSize, int element) {
+void findMiddle(stack<int> &s, int element) {
     //base case
-    if(s.size() == 0) {
-        cout  << "Empty stack." << endl;
-        return;
-    }
-    if(s.size() == totalSize/2 + 1) {
+    if(s.empty()) {
         s.push(element);
         return;
     }
@@ -17,7 +13,7 @@ void findMiddle(stack<int> &s, int &totalSize, int element) {
     s.pop();
 
     //recursion
-    findMiddle(s, totalSize, element);
+    findMiddle(s, element);
 
     //backtrack
     s.push(temp);
@@ -44,8 +40,8 @@ int main() {
     s.push(70);
 
     int element = 100;
-    int totalSize = s.size();
-    findMiddle(s, totalSize, element);
+
+    findMiddle(s, element);
 
     print(s);
 
