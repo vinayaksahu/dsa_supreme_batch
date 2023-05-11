@@ -36,7 +36,6 @@ bool isValid(string s) {
         }
     }
 
-
     //after completion of traversing string if stack is empty
     //then return true
     if(st.empty())
