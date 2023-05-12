@@ -12,28 +12,26 @@ void solve(stack<int> &s, int topElement) {
     int temp = s.top();
     s.pop();
 
-    //recursion
+    //RC
     solve(s, topElement);
 
-    //backtrack
+    //BT
     s.push(temp);
 }
 
-void insertAtBottomToTopElement(stack<int> &s) {
-    //empty stack
-    if (s.empty()) {
-        cout << "Stack underflow.";
+void inserAtBottomToTopElement(stack<int> &s) {
+    //empty case
+    if(s.empty()) {
+        cout << "Empty stack.";
         return;
     }
-    
+
     int topElement = s.top();
-
+    s.pop();
     solve(s, topElement);
-
 }
 
 void print(stack<int> s) {
-    
     while (!s.empty()) {
         cout << s.top() << " ";
         s.pop();
@@ -41,6 +39,7 @@ void print(stack<int> s) {
 }
 
 int main() {
+
 
     stack<int> s;
 
@@ -52,10 +51,10 @@ int main() {
     s.push(60);
     s.push(70);
 
-    //insert top element at bottom
-    insertAtBottomToTopElement(s);
+    print(s);
 
-    //print
+    inserAtBottomToTopElement(s);
+
     print(s);
 
     return 0;
