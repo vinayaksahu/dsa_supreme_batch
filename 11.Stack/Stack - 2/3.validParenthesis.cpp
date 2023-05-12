@@ -5,7 +5,7 @@ using namespace std;
 
 bool isValid(string s) {
 
-//create stack
+    //create stack
     stack<char> st;
 
     //traverse string char by char 

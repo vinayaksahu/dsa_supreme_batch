@@ -2,32 +2,31 @@
 #include<stack>
 using namespace std;
 
-void findMiddle(stack<int> &s, int element) {
+void insertAtBottom(stack<int> &s, int element) {
     //base case
     if(s.empty()) {
         s.push(element);
-        return;
+        return; 
     }
 
     int temp = s.top();
     s.pop();
 
-    //recursion
-    findMiddle(s, element);
+    //RC
+    insertAtBottom(s, element);
 
-    //backtrack
+    //BT
     s.push(temp);
 }
 
 void print(stack<int> s) {
-    
     while (!s.empty()) {
         cout << s.top() << " ";
         s.pop();
     } cout << endl;
 }
 
-int main() {
+int main () {
 
     stack<int> s;
 
@@ -39,11 +38,11 @@ int main() {
     s.push(60);
     s.push(70);
 
-    int element = 100;
-
-    findMiddle(s, element);
-
     print(s);
+
+    int element = 500;
+
+    insertAtBottom(s, element);
 
     print(s);
 
