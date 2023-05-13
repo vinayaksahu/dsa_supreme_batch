@@ -2,57 +2,60 @@
 #include<stack>
 using namespace std;
 
-
 bool isValid(string s) {
 
-    //create stack
     stack<char> st;
 
-    //traverse string char by char 
-    for(int i = 0; i < s.length(); i++) {
-        //and store open brackets only
-        char ch = s[i];
-        if(ch == '(' || ch == '{' || ch == '[')
-            st.push(ch);
-
-        //else match top char of the stack 
-        //(opening brackets) to next char(closing brackets) 
-        else {
-            //not empty -> do something
-            if(!st.empty()) {
-                 //match top char to next char(closing brackets) 
-                char topCh = st.top();
-                if ((topCh == '(' && ch == ')') ||
-                    (topCh == '{' && ch == '}') ||
-                    (topCh == '[' && ch == ']'))
-                  st.pop();
-                //not match
-                else
-                  return false;
-            }
-            //empty -> return false
-            else
-                return false;
+    //traverse every char of string
+    for (int i = 0; i < s.length(); i++) {
+        //open brackets
+        if (s[i] == '(' || s[i] == '{' || s[i] == '[') {
+            st.push(s[i]);
         }
+
+        //closing brackets
+        else {
+            //check empty
+            if (!st.empty()) {
+
+                //match cases
+                if (st.top() == '(' && s[i] == ')') {
+                    st.pop();
+                }
+                else if (st.top() == '{' && s[i] == '}') {
+                    st.pop();
+                }
+                else if (st.top() == '[' && s[i] == ']') {
+                    st.pop();
+                } else { // not match
+                    return false;
+                }
+            }
+            //not empty
+            else { 
+                return false;
+            }
+            
+        }            
     }
 
-    //after completion of traversing string if stack is empty
-    //then return true
-    if(st.empty())
+    //after traversing
+    if (st.empty()) {
         return true;
-    //else return false
-    else    
+    } else {
         return false;
+    }
+    
 }
 
 int main() {
 
-    string s = "{}";
+    string s = "[()}]";
 
     if(isValid(s))
-        cout << "true.";
-    else 
-        cout << "false.";
+        cout << "True";
+    else
+        cout << "False";
 
     return 0;
 }
