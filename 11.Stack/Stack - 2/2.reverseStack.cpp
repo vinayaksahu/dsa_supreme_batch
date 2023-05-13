@@ -2,7 +2,7 @@
 #include<stack>
 using namespace std;
 
-void insertAtBottomToTopElement(stack<int> &s, int topElement) {
+void insertAtBottom(stack<int> &s, int topElement) {
     //base case
     if(s.empty()) {
         s.push(topElement);
@@ -12,20 +12,19 @@ void insertAtBottomToTopElement(stack<int> &s, int topElement) {
     int temp = s.top();
     s.pop();
 
-    //recursion
-    insertAtBottomToTopElement(s, topElement);
+    //RC
+    insertAtBottom(s, topElement);
 
-    //backtrack
+    //BT
     s.push(temp);
-}
+} 
 
 void reverseStack(stack<int> &s) {
-
     //base case
-    if (s.empty()) {
+    if(s.empty()) {
         return;
     }
-    
+
     int topElement = s.top();
     s.pop();
 
@@ -33,11 +32,10 @@ void reverseStack(stack<int> &s) {
     reverseStack(s);
 
     //BT
-    insertAtBottomToTopElement(s, topElement); 
+    insertAtBottom(s, topElement);
 }
 
 void print(stack<int> s) {
-
     while (!s.empty()) {
         cout << s.top() << " ";
         s.pop();
@@ -53,6 +51,8 @@ int main() {
     s.push(30);
     s.push(40);
     s.push(50);
+    s.push(60);
+    s.push(70);
 
     print(s);
 
