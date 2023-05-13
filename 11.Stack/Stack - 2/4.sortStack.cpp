@@ -2,35 +2,27 @@
 #include<stack>
 using namespace std;
 
-void insertSorted(stack<int> &s, int target) {
+void insertSorted(stack<int> &s, int topElement) {
     //base case
-    if(s.empty() || s.top() >= target) {
-        s.push(target);
+    if (s.empty() || s.top() >= topElement) {
+        s.push(topElement);
         return;
     }
-
-/*     if(s.top() >= target) {
-        s.push(target);
-        return;
-    } */
-
-    int topElemnt = s.top();
+    
+    int temp = s.top();
     s.pop();
 
     //RC
-    insertSorted(s, target);
+    insertSorted(s, topElement);
 
     //BT
-    s.push(topElemnt);
-    
+    s.push(temp);
 }
 
 void sortStack(stack<int> &s) {
-
     //base case
-    if(s.empty()) {
+    if(s.empty())
         return;
-    }
 
     int topElement = s.top();
     s.pop();
@@ -40,11 +32,10 @@ void sortStack(stack<int> &s) {
 
     //BT
     insertSorted(s, topElement);
-
-}
+} 
 
 void print(stack<int> s) {
-    while(!s.empty()) {
+    while (!s.empty()) {
         cout << s.top() << " ";
         s.pop();
     } cout << endl;
