@@ -28,7 +28,7 @@ int longestValidParentheses(string s) {
 
 int main() {
 
-string s = ")()())(()())";
+string s = ")()()";
 
     int ans = longestValidParentheses(s);
 
