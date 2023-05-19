@@ -41,6 +41,20 @@ void nextSmallerElement(vector<int> input) {
     print(ans); //print ans array
 }
 
+void prevSmallerElementBruteForce(vector<int> arr) {
+
+    for (int i = 0; i < arr.size(); i++) {
+        int ans = -1;
+        for (int j = i-1; j >= 0; j--) {
+            if (arr[i] > arr[j]) {
+                ans = arr[j];
+                break;
+            }
+        }
+        cout << ans << " ";
+    } cout << endl;
+} 
+
 void previousSmallerElement(vector<int> input) {
 
     vector<int> ans(input.size());
@@ -57,20 +71,6 @@ void previousSmallerElement(vector<int> input) {
     
     print(ans);
 }
-
-void prevSmallerElementBruteForce(vector<int> arr) {
-
-    for (int i = 0; i < arr.size(); i++) {
-        int ans = -1;
-        for (int j = i-1; j >= 0; j--) {
-            if (arr[i] > arr[j]) {
-                ans = arr[j];
-                break;
-            }
-        }
-        cout << ans << " ";
-    } cout << endl;
-} 
 
 int main() {
 
