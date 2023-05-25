@@ -1,5 +1,4 @@
 #include<iostream>
-#include<limits.h>
 using namespace std;
 
 class Queue {
@@ -36,7 +35,7 @@ class Queue {
                 //arr[front] = INT_MIN;
                 front++;
                 if (front == rear) { // ho skta hai front++ krk front == rear
-                    front = rear = 0;
+                    front = rear = 0; //toh front and rear ko starting index se start kr do
                 }
             }
         }
@@ -69,32 +68,19 @@ int main() {
     Queue q(5);
 
     q.push(10);
-    q.print(q);
+    q.pop();
     q.push(20);
+    q.pop();
     q.push(30);
-    q.print(q);
+    q.pop();
     q.push(40);
+    q.pop();
     q.push(50);
-    cout << "Size: " << q.getSize() << endl;
-
-    cout << "Front: " << q.getFront() << endl;
-
     q.pop();
-    cout << "Size: " << q.getSize() << endl;
-    cout << "Front: " << q.getFront() << endl;
-    q.pop();
-    q.print(q);
-    q.pop();
+    q.push(60);
+    q.push(70);
 
-    cout << "Size: " << q.getSize() << endl;
-
-    if (q.isEmpty()) {
-        cout << "Queue is empty." << endl;
-    } else {
-        cout << "Queue is not empty." << endl;
-    }
-    
-    q.print(q);
+    cout << q.getFront() << endl;
 
     return 0;
 }

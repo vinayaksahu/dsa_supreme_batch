@@ -22,7 +22,7 @@ int main() {
 
     //removal
     q.pop();
-
+    q.push(60);
     cout << "Size of queue(after pop): " << q.size() << endl;
 
     //empty
