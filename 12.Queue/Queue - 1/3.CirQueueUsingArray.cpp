@@ -13,20 +13,16 @@ class CirQueue {
         CirQueue(int size) {
             arr = new int[size];
             this->size = size;
-            front = rear = 0;
+            front = rear = -1;
         }
 
         void push(int data) {
             
-            if (front == 0 && rear == size-1) { //Q is full
+            if (front == 0 && rear == size-1 || front - rear == 1) { //Q is full
                 cout << "Q is full" << endl;
             }
 
-            else if(front > rear) {
-                cout << "Q is full" << endl;
-            }
-
-            else if(front == -1) { //single element
+/*             else if(front == -1) { //single element
                 front = rear = 0;
                 arr[rear] = data;
             }
@@ -38,7 +34,19 @@ class CirQueue {
             else { //normal case
                 rear++;
                 arr[rear] = data;
+            } */
+            
+            else if(front == -1) { //single element
+                front = rear = 0;
             }
+
+            else if (front != 0 && rear == size-1) {//Circular case
+                rear = 0;
+            }
+            else { //normal case
+                rear++;
+            }
+            arr[rear] = data;
         }
 
         void pop() {
