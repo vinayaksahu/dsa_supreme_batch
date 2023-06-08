@@ -2,19 +2,29 @@
 using namespace std;
 
 int main() {
-    
-    int rows = 5;
-    int cols = 10;
 
-    for (int row = 0; row < rows; row+=1) {
-        for (int col = 0; col < cols; col++) {
-            if (row == 0 || row == rows-1 || col == 0 || col == cols-1)
+    int row = 5;
+    int col = 10;
+
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            if(i == 0 || i == row-1 || j == 0 || j == col-1)
                 cout << "*";
-            else
+            else    
                 cout << " ";
         } cout << endl;
-        
     }
-    
+
     return 0;
 }
+
+
+/*
+
+**********
+*        *
+*        *
+*        *
+**********
+
+*/
