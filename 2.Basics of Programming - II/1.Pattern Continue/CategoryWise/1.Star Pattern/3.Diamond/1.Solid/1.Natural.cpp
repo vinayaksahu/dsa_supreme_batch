@@ -26,26 +26,21 @@ int main() {
     }
    */  
    
-    for (int i = 0; i < 2*n-1; i++) {
-
-        int cond = 0;
-
-        if (i < n)
-            cond = i + 1;
-        else    
-            cond = n - (i % n) - 1;
+    for (int i = 0; i < 2*n; i++) {
+        int cond = (i < n) ? (i + 1) : (n - (i % n) - 1);
 
         for (int j = 0; j < n - cond; j++) {
-            cout << " ";   
+            cout << " ";
         }
-
+        
         for (int j = 0; j < cond; j++) {
             cout << "* ";
         } cout << endl;
     }
-   
+
     return 0;
 }
+    
 
 /*
 
