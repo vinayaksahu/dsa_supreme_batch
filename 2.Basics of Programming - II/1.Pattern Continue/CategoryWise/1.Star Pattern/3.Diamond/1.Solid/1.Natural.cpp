@@ -27,7 +27,8 @@ int main() {
    */  
    
     for (int i = 0; i < 2*n; i++) {
-        int cond = (i < n) ? (i + 1) : (n - (i % n) - 1);
+        //int cond = (i < n) ? (i + 1) : (n - (i % n) - 1);
+        int cond = (i < n) ? (i + 1) : (n + (n - i) - 1);
 
         for (int j = 0; j < n - cond; j++) {
             cout << " ";
