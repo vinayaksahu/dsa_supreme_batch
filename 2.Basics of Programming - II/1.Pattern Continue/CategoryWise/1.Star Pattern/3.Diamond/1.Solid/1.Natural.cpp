@@ -30,9 +30,9 @@ int main() {
         //int cond = (i < n) ? (i + 1) : (n - (i % n) - 1);
         int cond = (i < n) ? (i + 1) : (n + (n - i) - 1);
 
-        for (int j = 0; j < n - cond; j++) {
+/*         for (int j = 0; j < n - cond; j++) {
             cout << " ";
-        }
+        } */
         
         for (int j = 0; j < cond; j++) {
             cout << "* ";
