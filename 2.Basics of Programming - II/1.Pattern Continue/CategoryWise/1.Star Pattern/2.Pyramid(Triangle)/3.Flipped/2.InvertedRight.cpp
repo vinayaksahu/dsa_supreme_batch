@@ -1,31 +1,36 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
-    
-    int n = 5;
+    int n = 8;
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < i; j++) {
+    for (int i = 0; i < n * n; i++) {
+        int row = i / n;
+        int col = i % n;
+
+        if (col >= row && col < n - row) {
+            cout << "* ";
+        } else {
             cout << "  ";
         }
-        for (int j = 0; j < n-i; j++) {
-            if (i == n-1 || j == 0 || j == n-i-1)
-                cout << "* ";
-            else
-                cout << "  ";
-        } cout << endl;    
+
+        if (col == n - 1) {
+            cout << endl;
+        }
     }
-    
+
     return 0;
 }
 
 /*
 
-* * * * * 
-  *     * 
-    *   * 
-      * * 
-        * 
+* * * * * * * * *    
+*             * *   
+*           * * *   
+*         * * * *   
+*       * * * * *   
+*     * * * * * *   
+*   * * * * * * *   
+* * * * * * * * * 
 
 */
