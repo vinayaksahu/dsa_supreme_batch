@@ -13,6 +13,7 @@ int main() {
     q.push(30);
     q.push(40);
     q.push(50);
+    q.push(60);
 
     //front
     cout << "Front of queue: " << q.front() << endl;
