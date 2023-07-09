@@ -9,7 +9,7 @@ int factorial(int n) {
 
     //Recursive relation
     int ans = n * factorial(n-1);
-
+   
     return ans;
 }
 
