@@ -16,7 +16,7 @@ void towerOfHanoi(int n, char from_rod, char to_rod,
 // Driver code
 int main()
 {
-	int N = 5;
+	int N = 2;
 
 	// A, B and C are names of rods
 	towerOfHanoi(N, 'A', 'C', 'B');
