@@ -46,7 +46,7 @@ class CirQueue {
             else { //normal case
                 rear++;
             }
-            arr[rear] = data;
+            arr[rear] = data;  
         }
 
         void pop() {
