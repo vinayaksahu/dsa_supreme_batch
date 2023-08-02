@@ -144,7 +144,7 @@ int main() {
 }
 
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <stdlib.h>
 
 struct Node {
@@ -255,7 +255,7 @@ void deleteNode(struct Node** head, int data) {
     }
 }
 
-/* int main() {
+int main() {
     struct Node* head = NULL;
 
     insertAtBeginning(&head, 4);
@@ -283,4 +283,5 @@ void deleteNode(struct Node** head, int data) {
     traverse(head);
 
     return 0;
+}
 } */
