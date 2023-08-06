@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stack>
 #include <string>
+using namespace std;
 
 // Function to check if the character is an operator (+, -, *, /, ^).
 bool isOperator(char c) {
@@ -30,12 +31,12 @@ int getPrecedence(char op) {
 }
 
 // Function to convert infix expression to postfix expression.
-std::string infixToPostfix(const std::string& infix) {
-    std::string postfix;
-    std::stack<char> operatorStack;
+string infixToPostfix(const string& infix) {
+    string postfix;
+    stack<char> operatorStack;
 
     for (char c : infix) {
-        if (std::isalnum(c)) {
+        if (isalnum(c)) {
             postfix.push_back(c); // If operand, append to the postfix expression.
         } else if (isOperator(c)) {
             // Pop operators from the stack and append to the postfix expression
@@ -69,9 +70,9 @@ std::string infixToPostfix(const std::string& infix) {
 }
 
 int main() {
-    std::string infixExpression = "K + L - M ^ * N + (O ^ P) ^ * W / U / V ^ * T + Q";
-    std::string postfixExpression = infixToPostfix(infixExpression);
-    std::cout << "Infix Expression: " << infixExpression << std::endl;
-    std::cout << "Postfix Expression: " << postfixExpression << std::endl;
+    string infixExpression = "A+B";
+    string postfixExpression = infixToPostfix(infixExpression);
+    cout << "Infix Expression: " << infixExpression << endl;
+    cout << "Postfix Expression: " << postfixExpression << endl;
     return 0;
 }
