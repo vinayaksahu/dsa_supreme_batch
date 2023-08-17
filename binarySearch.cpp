@@ -2,42 +2,40 @@
 
 int binarySearch(int arr[], int n, int target) {
 
-    int s = 0; //start index
-    int e = n-1; //end index
+    int start = 0; // start index
+    int end = n - 1; //end index
+    int mid = (start + end) / 2;
 
-    while (s <= e) {
+    while (start <= end) {
+        if (arr[mid] == target) { //mid_element = target  return index
+            return mid;
+        }
 
-        //int mid = (s + e) / 2; //middle index
-        int mid = s + (e - s) / 2; //middle index   <- homework
+        else if(arr[mid] < target)  { //left search
+            start = mid + 1; //update start
+        }
 
-        if (arr[mid] == target)
-            return mid; 
-        
-        else if (arr[mid] > target)
-            e = mid - 1; //update end
-        
-        else if (arr[mid] < target)
-            s = mid + 1;//update start
+        else if(arr[mid] > target)  { //right search
+            end = mid - 1; //update end
+        }
+
+        mid = (start + end) / 2;//update mid
     }
-
-    return -2;
-
+    
 }
 
-int main()
+int main(int argc, char const *argv[])
 {
-    int arr[] = {1,2,3,4,5,6,7,8,9}; 
+    
+    int arr[] = {1,2,3,4,5,6,7,8,9};
 
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int size = sizeof(arr) / sizeof(int);
 
     int target = 8;
 
     int index = binarySearch(arr, size, target);
 
-    if(index == -2)
-        printf("Element not fouond.");
-    else
-        printf("%d", index);
+    printf("%d", index);
 
     return 0;
 }
