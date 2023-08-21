@@ -3,7 +3,7 @@
 using namespace std;
 
 int findMin(int arr[], int n) {
-    int mini = INT_MAX;
+    int mini = arr[0];
 
     for (int i = 0; i < n; i++) {
         if(mini > arr[i])
@@ -26,7 +26,7 @@ int findMax(int arr[], int n) {
 
 int main() {
 
-    int arr[] = {1,4,5,6,2,3,9,8,7};
+    int arr[] = {150,44,55,656,20,333,4529,878,457};
 
     int size = sizeof(arr) / sizeof(arr[0]);
 
