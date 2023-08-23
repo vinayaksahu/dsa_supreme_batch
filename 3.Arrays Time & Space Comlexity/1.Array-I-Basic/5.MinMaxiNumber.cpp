@@ -26,7 +26,7 @@ int findMax(int arr[], int n) {
 
 int main() {
 
-    int arr[] = {150,44,55,656,20,333,4529,878,457};
+    int arr[] = {56,56,55,54,55,55,55,555};
 
     int size = sizeof(arr) / sizeof(arr[0]);
 
