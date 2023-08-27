@@ -14,7 +14,7 @@ int findMin(int arr[], int n) {
 }
 
 int findMax(int arr[], int n) {
-    int maxi = INT_MIN;
+    int maxi = arr[0];
 
     for (int i = 0; i < n; i++) {
         if(maxi < arr[i])
@@ -26,7 +26,7 @@ int findMax(int arr[], int n) {
 
 int main() {
 
-    int arr[] = {56,56,55,54,55,55,55,555};
+    int arr[] = {-2147483648,56,55,54,55,55,55,555};
 
     int size = sizeof(arr) / sizeof(arr[0]);
 
