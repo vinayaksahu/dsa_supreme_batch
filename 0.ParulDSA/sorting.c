@@ -35,19 +35,23 @@ void bubbleSort(int arr[], int n) {
     //1: Traverse for rounds : outer loop
     for(int i = 0; i < n-1; i++) {
        //1.1: Traverse the elements for adjecent elements comparison : Inner Loop
+       int swapped = 0;
        for(int j = 0; j < n-i-1; j++) {
             //1.1.1: if cur1rent element is greater than next element 
-            if(arr[j] > arr[j+1])
-                   //1.1.1.1 swap current element and inext element
-              swap(&arr[j], &arr[j+1]);
-                   
+            if(arr[j] > arr[j+1]) {
+                //1.1.1.1 swap current element and inext element
+                swap(&arr[j], &arr[j+1]);
+                swapped++;
+            }                 
        }
+       if(swapped == 0)
+            break;  
     }
     //2: print the Array
     printArray(arr, n);
 }
 int main() {
-    int arr[] = {14,52,24,55,74};
+    int arr[] = {154,52,24,55,74};
     int n = sizeof(arr) / sizeof(arr[0]);
     printf("Given array: "); printArray(arr, n);
     printf("Sorted array: "); bubbleSort(arr, n); //selectionSort(arr, n);
