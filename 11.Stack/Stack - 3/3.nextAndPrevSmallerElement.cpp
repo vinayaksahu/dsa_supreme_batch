@@ -10,7 +10,7 @@ void printArray(vector<int> v) {
     } cout << endl;
 }
 
-void nextSmallerElementUsingBrute(vector<int> input) {
+/* void nextSmallerElementUsingBrute(vector<int> input) {
 
     for (int i = 0; i < input.size(); i++) {
         int ans = -1;
@@ -37,8 +37,8 @@ void preSmallerElementBrute(vector<int> input) {
         }   
         cout << ans << " ";
     } cout << endl << endl;
-}
-
+}*/
+/*
 void nextSmallerElementStack(vector<int> input) {
 
     vector<int> ans(input.size()); //create ans array size of input array
@@ -54,8 +54,8 @@ void nextSmallerElementStack(vector<int> input) {
     }
 
     printArray(ans); //print ans array
-}
-
+}*/
+/*
 void preSmallerElementStack(vector<int> input) {
 
     vector<int> ans(input.size());
@@ -71,22 +71,44 @@ void preSmallerElementStack(vector<int> input) {
     
     printArray(ans);
 }
+ */
+
+void nextGreaterElementStack(vector<int> input) {
+    int n = input.size();
+    vector<int> ans(n, -1); // Initialize ans array with -1
+    stack<int> s;
+
+    for (int i = n - 1; i >= 0; i--) {
+        int curr = input[i];
+        while (!s.empty() && s.top() <= curr) {
+            s.pop();
+        }
+        if (!s.empty()) {
+            ans[i] = s.top();
+        }
+        s.push(curr);
+    }
+
+    printArray(ans);
+}
 
 int main() {
 
     vector<int> input;
     input.push_back(5);
-    input.push_back(8);
-    input.push_back(6);
-    input.push_back(3);
-    input.push_back(2);
+    input.push_back(18);
+    input.push_back(61);
+    input.push_back(31);
+    input.push_back(222);
 
     cout << "Given input array: " << endl;
     printArray(input);
     cout << endl;
 
+    cout << "Next greater element(stack): " << endl;
+    nextGreaterElementStack(input);
 
-    cout << "Next smaller element(brute): " << endl;
+    /* cout << "Next smaller element(brute): " << endl;
     nextSmallerElementUsingBrute(input);
 
     cout << "Previous smaller element(brute): " << endl;
@@ -99,6 +121,6 @@ int main() {
 
     cout << "Previous smaller element(stack): " << endl;
     preSmallerElementStack(input);
-
+ */
     return 0;
 }
