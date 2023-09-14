@@ -6,7 +6,7 @@ int find(int);
  
 int main()
 {
-    int num = 1234, result;
+    int num = 3991, result;
  
     //printf("Enter a number: ");
     //scanf("%d", &num);
