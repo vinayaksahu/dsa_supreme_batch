@@ -55,7 +55,7 @@ void nextGreaterSameDigits(char num[]) {
 }
 
 int main() {
-    char num[] = "1234";
+    char num[] = "12321";
     nextGreaterSameDigits(num);
     return 0;
 }
