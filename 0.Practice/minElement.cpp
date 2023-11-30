@@ -19,14 +19,15 @@ int main() {
 
 
     //selection sort
-    
-    for (int i = 0; i < arr.size()-1; i++) {
+/*     for (int i = 0; i < arr.size()-1; i++) {
         int min_idx = i;
         for (int j = i+1; j < arr.size(); j++) {
             if (arr[j] < arr[min_idx])
                 swap (arr[j], arr[min_idx]);
         }
-    }
+    } */
+
+    
 
 
     cout << "Sorted array: ";
