@@ -16,6 +16,23 @@ int main() {
     }
 
     cout << "min element: " << min_ele << endl;
+
+
+    //selection sort
+    
+    for (int i = 0; i < arr.size()-1; i++) {
+        int min_idx = i;
+        for (int j = i+1; j < arr.size(); j++) {
+            if (arr[j] < arr[min_idx])
+                swap (arr[j], arr[min_idx]);
+        }
+    }
+
+
+    cout << "Sorted array: ";
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << " ";
+    }
     
 
     return 0;
