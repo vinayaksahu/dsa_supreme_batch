@@ -70,7 +70,7 @@ string infixToPostfix(const string& infix) {
 }
 
 int main() {
-    string infixExpression = "A+B";
+    string infixExpression = "(A+B)";
     string postfixExpression = infixToPostfix(infixExpression);
     cout << "Infix Expression: " << infixExpression << endl;
     cout << "Postfix Expression: " << postfixExpression << endl;

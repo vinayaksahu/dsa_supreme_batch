@@ -23,7 +23,7 @@ void bubbleSort(vector<int> arr) {
 int main () {
 
     vector<int> arr{1,4,5,2,3,6,9,8,7};
-
+    cout << sizeof(bool) << endl;
     //sort
     bubbleSort(arr);
 
