@@ -1,52 +1,46 @@
-#include<iostream>
-#include<vector>
-using namespace std;
+#include <stdio.h>
 
-void printArray(vector<int> arr) {
-
-    for (auto &val : arr)
-        cout << val << " ";
-    cout << endl;
-}
-
-int findMinIdx(int arr[], int start, int end) {
-    int minIndex = start;
-    for (int i = start + 1; i < end; i++) {
-        if (arr[i] < arr[minIndex]) {
-            minIndex = i;
-        }
-    }
-    return minIndex;
-}
-
-void selectionSort(vector<int> arr) {
-
-    int n = arr.size();
-    for (int i = 0; i < n-1; i++) {
-        int min_idx = i;
-        for (int j = i+1; j < n; j++) {
-            if (arr[j] < arr[min_idx])
-                min_idx = j;
-        }
-        swap (arr[min_idx], arr[i]);
-    }
-
-    for (int i = 0; i < n-1; i++) {
-        int min_idx = findMinIdx(arr, i, n);
-        swap (arr[min_idx], arr[i]);
-    }
+// Function to perform selection sort on an array
+void selectionSort(int arr[], int n) {
+    int i, j, minIndex, temp;
     
-
-    //print
-    printArray(arr);
+    // Traverse the array
+    for (i = 0; i < n-1; i++) {
+        // Find the minimum element in the unsorted part
+        minIndex = i;
+        for (j = i+1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        
+        // Swap the found minimum element with the first element
+        temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
+    }
 }
- 
+
+// Function to print an array
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
 int main() {
-
-    vector<int> arr{1,5,9,4,2,3,6,5,8};
-
-    //sort
-    selectionSort(arr);
-
+    int arr[] = {64, 25, 12, 22, 11};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    
+    printf("Original array: \n");
+    printArray(arr, n);
+    
+    // Perform selection sort
+    selectionSort(arr, n);
+    
+    printf("Sorted array: \n");
+    printArray(arr, n);
+    
     return 0;
 }
