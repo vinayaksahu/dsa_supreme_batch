@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 // Function to insert an element at a given position in the array
 void insertElement(int arr[], int size, int position, int element) {

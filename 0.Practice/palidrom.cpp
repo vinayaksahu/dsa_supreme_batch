@@ -4,11 +4,12 @@ using namespace std;
 
 int checkPalidrom(int num) {
 
-    int digit[50];
+    vector<int> digit;
     int n = 0;
     while(num) {
-        digit[n] = num % 10;
-        num = num/10;
+        int ele = num % 10;
+        digit.push_back(ele);
+        num /= 10;
         n++;
     }
 
@@ -43,7 +44,7 @@ int palidromicArray(vector<int> arr) {
 
 int main() {
 
-    vector<int> arr{121, 212, 545, 7667};
+    vector<int> arr{121, 212, 545, 7667, 15951};
 
     bool pA = palidromicArray(arr);
 
