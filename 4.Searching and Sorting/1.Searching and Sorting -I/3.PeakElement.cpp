@@ -2,27 +2,29 @@
 #include<vector>
 using namespace std;
 
-int findPeak(vector<int> arr) {
-    int s = 0;
-    int e = arr.size()-1;
-    while(s < e) {
-        int mid = s + (e - s) / 2; //find mid
-        if(arr[mid] < arr[mid+1])
-            s = mid + 1; //search right
-        else //if(arr[mid] > arr[mid+1])
-            e = mid; //search left
+int peakElement(vector<int> arr) {
+
+    int start = 0;
+    int end = arr.size()-1;
+
+    while (start < end) {
+        int mid = start + (end - start) / 2;
+        if(arr[mid] < arr[mid+1]) {
+            start = mid + 1;
+        } else {
+            end = mid;
+        }
     }
-    return s;
-    //return e;
+    return start;
 }
 
 int main () {
 
-    vector<int> arr{1,2,10,12,5,2};
+    vector<int> arr{10,12,14,13,11,9};
 
-    int peakIndex = findPeak(arr);
+    int peakIndex = peakElement(arr);
 
-    cout << "Peak Element: " << arr[peakIndex];
+    cout << "Peak element: " << arr[peakIndex];
 
     return 0;
 }

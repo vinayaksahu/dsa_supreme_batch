@@ -62,7 +62,7 @@ int findLastOcc(vector<int> arr, int target) {
 
 int main () {
 /* First and Last occurance */
-    vector<int> arr{4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,7,7};
+    vector<int> arr{4,5,5,5,5,5,5,5,4,5,5,5,5,5,5,5,6,6,6,7,7};
     int target = 5;
     int firstOccIdx = findFirstOcc(arr, target);
     cout << "Function: First occurance index: " << firstOccIdx << endl;
@@ -74,7 +74,7 @@ int main () {
     cout << "Total number of occurance: " << totalOcc << endl;
 
 /* Lower and Upper Bound */
-    int brr[] = {4, 5, 5, 6, 6, 6, 7, 7};
+    int brr[] = {4,5,5,5,5,5,5,5,4,5,5,5,5,5,5,5,6,6,6,7,7};
     //int n = sizeof(brr) / sizeof(brr[0]);
     vector<int> v(begin(brr), end(brr));
     cout << endl << "Print array to vector" << endl;
