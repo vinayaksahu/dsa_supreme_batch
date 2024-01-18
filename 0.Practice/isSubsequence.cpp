@@ -10,7 +10,7 @@ public:
         while (i < s.length() && j < t.length()) {
             if (s[i] == t[j]) {
                 i++; 
-                j = 0;
+                j++;
             }
             else
                 j++;
