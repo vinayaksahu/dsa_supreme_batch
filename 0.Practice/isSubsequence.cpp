@@ -23,8 +23,8 @@ public:
 int main() {
     Solution solution;
 
-    string s1 = "abc";
-    string t1 = "acb";
+    string s1 = "acb";
+    string t1 = "ahbgdc";
 
     if (solution.isSubsequence(s1, t1)) {
         cout << "Output for Test Case: true\n";
