@@ -13,7 +13,7 @@ int main()
 	x = x + y; 
 
 	// x is implicitly converted to float 
-	float z = x + 1.0; 
+	float z = x + 1.2; 
 
 	cout << "x = " << x << endl 
 		<< "y = " << y << endl 
