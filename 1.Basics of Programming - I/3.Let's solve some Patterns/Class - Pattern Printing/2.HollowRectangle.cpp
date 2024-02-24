@@ -1,7 +1,10 @@
 #include<iostream>
+#include<conio.h>
 using namespace std;
 
 int main() {
+
+    clrscr();
 
     int n = 10;
 

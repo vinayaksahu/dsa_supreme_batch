@@ -4,8 +4,8 @@
 int main() {
 
     int *arr = (int*)malloc(5*sizeof(int));
-    
-    *(arr + 0) = 10;
+
+*(arr + 0) = 10;
     *(arr + 1) = 20;
     *(arr + 2) = 30;
     *(arr + 3) = 40;

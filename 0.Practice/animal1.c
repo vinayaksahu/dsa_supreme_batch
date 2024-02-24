@@ -1,30 +1,30 @@
-#include<stdio.h>
+                                    #include<stdio.h>
 
-typedef struct {
-    int age;
-    char name[50];
-} Animal;
+                                    typedef struct {
+                                        int age;
+                                        char name[50];
+                                    } Animal;
 
-void setInfo(Animal* dog) {
-    //(*dog).age = 5;
-    dog->age = 5;
-    dog->name = "dfkn";
-}
+                                    void setInfo(Animal* dog) {
+                                        //(*dog).age = 5;
+                                        dog->age = 5;
+                                        dog->name = "dfkn";
+                                    }
 
-void getInfo(Animal* dog) {
+                                    void getInfo(Animal* dog) {
 
-    //printf("%d", (*dog).age);
-    printf("%d", dog->age);
-    printf("%s", dog->name);
-}
+                                        //printf("%d", (*dog).age);
+                                        printf("%d", dog->age);
+                                        printf("%s", dog->name);
+                                    }
 
-int main() {
+                                    int main() {
 
-    Animal dog;
+                                        Animal dog;
 
-    setInfo(&dog);
+                                        setInfo(&dog);
 
-    getInfo(&dog);
+                                        getInfo(&dog);
 
-    return 0;
-}
+                                        return 0;
+                                    }
